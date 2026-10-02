@@ -4,68 +4,43 @@
 
 ```mermaid
 flowchart TD
-%% =========================
-%% ACTORES
-%% =========================
+
 subgraph ACTORES ["ACTORES"]
-    Cliente ["Cliente"]
-    Admin ["Administrador"]
+Cliente ["Cliente"]
+Admin ["Administrador"]
 end
 
-%% =========================
-%% PRESENTACIÓN
-%% =========================
 subgraph PRESENTACION ["PRESENTACIÓN"]
-    Web ["Aplicación Web -> API REST"]
+Web ["Aplicación Web -> API REST"]
 end
 
-%% =========================
-%% LÓGICA DE NEGOCIO
-%% =========================
 subgraph NEGOCIO ["LÓGICA DE NEGOCIO"]
-    Usuarios ["Usuarios"]
-    Catalogo ["Catálogo (Salas y Equipos)"]
-    Carrito ["Carrito"]
-    Reservas ["Reservas"]
+Usuarios ["Usuarios"]
+Catalogo ["Catálogo (Salas y Equipos)"]
+Carrito ["Carrito"]
+Reservas ["Reservas"]
 end
 
-%% =========================
-%% DATOS
-%% =========================
 subgraph DATOS ["DATOS"]
-    BD ["Base de datos"]
+BD ["Base de datos"]
 end
 
-%% =========================
-%% SISTEMAS EXTERNOS
-%% =========================
 subgraph EXTERNOS ["SISTEMAS EXTERNOS"]
-    Pago ["Pasarela de pago"]
-    Auth ["Proveedor de Autenticación"]
+Pago ["Pasarela de pago"]
+Auth ["Proveedor Auth"]
 end
 
-%% =========================
-%% FLUJO PRINCIPAL
-%% =========================
 ACTORES --> PRESENTACION
 PRESENTACION --> NEGOCIO
 NEGOCIO --> DATOS
-
-%% Integraciones
 DATOS -->|"integraciones"| EXTERNOS
 
-%% =========================
-%% DISTRIBUCIÓN HORIZONTAL
-%% =========================
 Cliente ~~~ Admin
 Usuarios ~~~ Catalogo
 Catalogo ~~~ Carrito
 Carrito ~~~ Reservas
 Pago ~~~ Auth
 
-%% =========================
-%% ESTILOS
-%% =========================
 style ACTORES fill:#222, stroke:#fff, stroke-width: 2px,color:#fff
 style PRESENTACION fill:#222, stroke:#fff, stroke-width: 2px,color:#fff
 style NEGOCIO fill:#222, stroke: #fff, stroke-width: 2px,color:#fff
