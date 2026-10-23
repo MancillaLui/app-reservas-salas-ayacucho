@@ -38,3 +38,4 @@ flowchart TD
     Cliente -- HTTP / REST --> API
     Datos -- SQL --> BD
     MReservas -. HTTP .-> Pagos
+
