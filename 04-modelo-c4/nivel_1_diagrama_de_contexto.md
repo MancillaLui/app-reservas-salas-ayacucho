@@ -32,12 +32,16 @@ flowchart TD;
     Pagos["Pasarela de Pago (Yape/Plin)<br>[Sistema externo]<br>Procesa los pagos digitales y valida operaciones"];
     Auth["Proveedor de Identidad<br>[Sistema externo]<br>Autentica a los usuarios (Google/Email)"];
 
+    Mensajeria["Servicio de Mensajería (WhatsApp API / Resend)<br>[Sistema externo]<br>Entrega comprobantes y alertas"];
+
     %% Relaciones
     Cliente -- "Busca salas, reserva y paga" --> App;
     Admin -- "Gestiona catálogo y calendario" --> App;
     
     App -- "Solicita validación de cobro<br>[HTTPS/REST]" --> Pagos;
     App -- "Valida credenciales y perfil<br>[HTTPS/OAuth 2.0]" --> Auth;
+
+    App -- "Enviar comprobantes de reserva confirmada y alertas de cancelación<br>[HTTPS/REST]" --> Mensajeria;
 
     %% Clases de Estilo C4 (Colores)
     classDef persona fill:#08427b,color:#fff,stroke:#052e56,stroke-width:2px;
@@ -47,7 +51,7 @@ flowchart TD;
     %% Aplicación de estilos
     class Cliente,Admin persona;
     class App sistema;
-    class Pagos,Auth externo;
+    class Pagos,Auth,Mensajeria externo;
 ```
 
 ---
@@ -68,6 +72,7 @@ flowchart TD;
 | **App de Reservas Musicales** | Sistema en alcance | Permite a los clientes buscar disponibilidad en tiempo real, armar su reserva sin cruces de horarios y pagarla; permite al admin gestionar su local. | El equipo del proyecto (Solo Developer) |
 | **Pasarela de Pago (Yape/Plin)** | Sistema externo | Procesa los pagos digitales y valida las operaciones. | Proveedor de pagos / Banco |
 | **Proveedor de Identidad (Auth)** | Sistema externo | Autentica a los usuarios de forma segura (ej. Inicio de sesión con Google) para evitar fraudes. | Google / Supabase Auth |
+| **Servicio de Mensajería (WhatsApp API / Resend)** | Sistema externo | Entrega comprobantes de reserva confirmada y alertas de cancelación por WhatsApp o correo electrónico. | Proveedor de WhatsApp API / Resend |
 
 ---
 
@@ -79,6 +84,7 @@ flowchart TD;
 | Administrador | App de Reservas | Administra catálogo y visualiza calendario de reservas | — |
 | App de Reservas | Pasarela de Pago | Solicita validación de cobro / Genera QR | HTTPS/REST |
 | App de Reservas | Proveedor de Identidad | Valida credenciales y obtiene perfil del usuario | HTTPS/OAuth 2.0 |
+| App de Reservas | Servicio de Mensajería (WhatsApp API / Resend) | Enviar comprobantes de reserva confirmada y alertas de cancelación | HTTPS/REST |
 
 > *Nota: En el nivel 1 no se indica el protocolo entre personas y sistema (ej. navegador web vs móvil); eso se detalla en el nivel 2.*
 
@@ -91,10 +97,10 @@ flowchart TD;
 | 1 | Integración con pasarelas de pago externas | Por seguridad y facilidad de implementación, el sistema no almacena datos bancarios ni procesa tarjetas localmente. |
 | 2 | Uso de un Proveedor de Identidad (SSO) | Para reducir la fricción al registrarse (los músicos usan su cuenta de Google) y delegar la seguridad de las contraseñas. |
 | 3 | El sistema prioriza el acceso móvil (Mobile-First) | El usuario "Cliente" accederá predominantemente desde su celular al momento de coordinar con su banda. |
+| 4 | Servicio de mensajería como integración oficial | Comunica al cliente las reservas confirmadas y las cancelaciones mediante WhatsApp API / Resend. |
 
 ### Pendientes por definir
 
 | Tema | Detalle |
 |---|---|
-| Notificaciones externas | Falta definir si el sistema enviará correos electrónicos (ej. SendGrid) o mensajes automatizados por WhatsApp al confirmar la reserva. Si se elige un proveedor, se agregará como "Sistema Externo" en este diagrama. |
 | Facturación electrónica | Evaluar con el negocio si más adelante será necesario integrar una API de la SUNAT para emitir boletas electrónicas de forma automática. |

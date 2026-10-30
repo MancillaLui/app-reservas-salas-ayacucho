@@ -17,29 +17,30 @@ end;
 subgraph NEGOCIO ["LÓGICA DE NEGOCIO"];
 Usuarios["Usuarios"];
 Catalogo["Catálogo (Salas y Equipos)"];
-Carrito["Carrito"];
-Reservas["Reservas"];
+Reservas["Reservas (Motor Core y Carrito)"];
+Pagos["Pagos"];
 end;
 
 subgraph DATOS ["DATOS"];
-BD["Base de datos"];
+BD["Base de datos (Supabase)"];
 end;
 
 subgraph EXTERNOS ["SISTEMAS EXTERNOS"];
-Pago["Pasarela de pago"];
+Pasarela["Pasarela de pago"];
 Auth["Proveedor Auth"];
+Mensajeria["Mensajería (WhatsApp/Correo)"];
 end;
 
 ACTORES --> PRESENTACION;
-PRESENTACION --> NEGOCIO;
-NEGOCIO --> DATOS;
-DATOS -->|"integraciones"| EXTERNOS;
+PRESENTACION -->|"Delega"| NEGOCIO;
+NEGOCIO -->|"Persiste estado"| DATOS;
+NEGOCIO -->|"Llama API externa"| EXTERNOS;
 
 Cliente ~~~ Admin;
 Usuarios ~~~ Catalogo;
-Catalogo ~~~ Carrito;
-Carrito ~~~ Reservas;
-Pago ~~~ Auth;
+Catalogo ~~~ Reservas;
+Reservas ~~~ Pagos;
+Pasarela ~~~ Auth;
 
 style ACTORES fill:#222, stroke:#fff, stroke-width: 2px,color:#fff;
 style PRESENTACION fill:#222, stroke:#fff, stroke-width: 2px,color:#fff;
@@ -51,8 +52,9 @@ style Admin fill:#222, stroke:#fff,color:#fff;
 style Web fill:#222, stroke:#fff,color:#fff;
 style Usuarios fill:#222, stroke: #fff,color:#fff;
 style Catalogo fill:#222, stroke: #fff,color:#fff;
-style Carrito fill:#222, stroke: #fff,color:#fff;
 style Reservas fill:#222, stroke: #fff,color:#fff;
+style Pagos fill:#222, stroke: #fff,color:#fff;
 style BD fill:#222, stroke:#fff,color:#fff;
-style Pago fill:#222, stroke:#fff,color:#fff;
+style Pasarela fill:#222, stroke:#fff,color:#fff;
 style Auth fill:#222, stroke:#fff,color:#fff;
+style Mensajeria fill:#222, stroke:#fff,color:#fff;

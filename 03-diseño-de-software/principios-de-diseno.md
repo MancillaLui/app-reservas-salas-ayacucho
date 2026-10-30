@@ -26,6 +26,8 @@ classDiagram
         class CrearReservaUseCase {
             - reservaRepo: ReservaRepository
             - pagoPort: PagoPort
+            - catalogoPort: CatalogoPort
+            - mensajeriaPort: MensajeriaPort
             + ejecutar(cmd)
         }
     }
@@ -40,6 +42,14 @@ classDiagram
             + guardar(reserva)
             + verificarDisponibilidad()
         }
+        class CatalogoPort {
+            <<interface>>
+            + verificarStock(equipos): Promise~boolean~
+        }
+        class MensajeriaPort {
+            <<interface>>
+            + enviarComprobanteAsync(reserva): Promise~void~
+        }
         class PagoPort {
             <<interface>>
             + validarPago(monto, cel, cod)
@@ -47,6 +57,12 @@ classDiagram
     }
 
     namespace INFRAESTRUCTURA {
+        class CatalogoInternoAdapter {
+            + verificarStock(equipos): Promise~boolean~
+        }
+        class WhatsAppMensajeriaAdapter {
+            + enviarComprobanteAsync(reserva): Promise~void~
+        }
         class SupabaseReservaRepository {
             + guardar(reserva)
             + verificarDisponibilidad()
@@ -63,10 +79,14 @@ classDiagram
     CrearReservaUseCase ..> Reserva : crea
     CrearReservaUseCase --> ReservaRepository
     CrearReservaUseCase --> PagoPort
+    CrearReservaUseCase --> CatalogoPort
+    CrearReservaUseCase --> MensajeriaPort
 
     SupabaseReservaRepository ..|> ReservaRepository
     YapePagoAdapter ..|> PagoPort
     PlinPagoAdapter ..|> PagoPort
+    CatalogoInternoAdapter ..|> CatalogoPort : implementa
+    WhatsAppMensajeriaAdapter ..|> MensajeriaPort : implementa
 ```
 
 ## SOLID en el módulo Reservas
@@ -76,7 +96,7 @@ classDiagram
 | **S** · Responsabilidad única | Todas las capas | Cada clase tiene una sola tarea: el controlador recibe la petición HTTP, el caso de uso coordina la reserva, la entidad aplica la regla anti-overbooking y el repositorio guarda en PostgreSQL (Supabase) | `reserva.controller.ts`, `crear-reserva.use-case.ts`, `reserva.ts`, `supabase-reserva-repository.ts` |
 | **O** · Abierto/cerrado | Infraestructura | Para agregar una nueva pasarela (ej. Plin o Niubiz) se crea un nuevo adaptador; el caso de uso de crear reserva no se modifica | `yape-pago.adapter.ts`, `plin-pago.adapter.ts` |
 | **L** · Sustitución de Liskov | Infraestructura | Yape y Plin devuelven la misma estructura `{ aprobado, numOperacion }`; el caso de uso funciona exactamente igual con cualquiera de los dos | `yape-pago.adapter.ts`, `plin-pago.adapter.ts` |
-| **I** · Segregación de interfaces | Dominio | Cada interfaz tiene solo lo que Reservas necesita: `PagoPort` solo valida pagos, `ReservaRepository` solo guarda y verifica disponibilidad de salas | `pago-port.ts`, `reserva-repository.ts` |
+| **I** · Segregación de interfaces | Dominio | En lugar de una interfaz gigante, se usan puertos específicos y pequeños: `PagoPort` valida pagos, `CatalogoPort` verifica stock y `MensajeriaPort` envía comprobantes asíncronos; `ReservaRepository` encapsula la persistencia de reservas | `pago-port.ts`, `catalogo-port.ts`, `mensajeria-port.ts`, `reserva-repository.ts` |
 | **D** · Inversión de dependencias | Aplicación | El caso de uso recibe interfaces por el constructor y no conoce Supabase ni la API de Yape; las implementaciones se conectan en `reservas.module.ts` | `crear-reserva.use-case.ts`, `reservas.module.ts` |
 
 ## Qué pasaría sin SOLID en el Sistema de Reservas
@@ -87,6 +107,7 @@ classDiagram
 | Se cambia Supabase por otro BaaS | Se rompe y reescribe toda la lógica del módulo | Solo se reemplaza `SupabaseReservaRepository` |
 | Se quiere probar la lógica de reservas | Se necesita conexión a internet, Supabase y la API real | Se prueba en milisegundos con objetos falsos en memoria |
 | Cambia la regla del mínimo de horas | Hay que buscarla por controladores y rutas | Está aislada de forma segura en la entidad `Reserva` |
+| El proveedor de WhatsApp se cae | Si el envío está acoplado al flujo, el proceso falla después del cobro y puede perderse la confirmación de un pago ya realizado | Con SOLID y el manejo asíncrono tras `MensajeriaPort`, la reserva pagada se confirma y persiste; el error de envío se captura de forma aislada con `.catch(...)` |
 
 ## Relación con Clean Architecture y los patrones
 

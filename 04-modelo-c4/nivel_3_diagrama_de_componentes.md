@@ -32,7 +32,7 @@ flowchart TD;
     subgraph API_BACKEND ["API Backend [Contenedor: Node.js / Next.js API Routes]"]
         direction TB
         
-        Router["Rutas API REST\n[Componente: Middlewares]\nExpone endpoints, valida tokens JWT"]
+        Router["Rutas API REST\n[Componente: Middlewares]\nExpone endpoints, valida tokens JWT<br>Validación de Roles (RBAC - Admin/Cliente)"]
         
         subgraph Modulos ["Módulos de Negocio"]
             Usuarios["Módulo de Usuarios\n[Componente]\nGestión de perfiles y roles"]
@@ -60,7 +60,7 @@ flowchart TD;
     
     Usuarios -->|"Lee/Escribe perfil"| BD
     Catalogo -->|"Lee/Escribe salas/equipos"| BD
-    Reservas -->|"Lee/Escribe reservas (Bloqueo horas)"| BD
+    Reservas -->|"Lee/Escribe (Bloqueo por tsrange y Exclusion Constraints)"| BD
     Pagos -->|"Lee/Escribe transacciones"| BD
     
     Pagos -->|"Valida operación [HTTPS/REST]"| Yape
@@ -86,7 +86,7 @@ flowchart TD;
 
 | Componente | Responsabilidad | Funcionalidades principales | Carpeta en el código |
 |---|---|---|---|
-| **Rutas API REST** | Punto de entrada HTTP | Define las rutas (ej. `/api/reservas`), valida el token JWT de Supabase y redirige al módulo correcto. | `src/api/` |
+| **Rutas API REST** | Punto de entrada HTTP y autorización | Define las rutas (ej. `/api/reservas`), valida el token JWT de Supabase y aplica Validación de Roles (RBAC - Admin/Cliente) antes de redirigir al módulo correcto. Las rutas administrativas exigen un rol de Admin validado en el token firmado y controlado por el servidor. | `src/api/` |
 | **Módulo Usuarios** | Identidad y acceso | Gestiona los perfiles de los músicos (bandas) y administradores del local. | `src/modulos/usuarios/` |
 | **Módulo Catálogo** | Gestión de recursos | CRUD de Salas (capacidad, precio) y Equipos extras (baterías, platillos, cables). | `src/modulos/catalogo/` |
 | **Módulo Reservas** | Motor de negocio (Core) | Algoritmo **anti-overbooking**, armado del carrito, cálculo de costos y confirmación de horas. | `src/modulos/reservas/` |
@@ -98,8 +98,8 @@ flowchart TD;
 
 | Origen | Destino | Descripción | Tipo de comunicación |
 |---|---|---|---|
-| Rutas API | Módulos de negocio | Invoca los Casos de Uso desde los controladores. | Llamada en memoria |
-| Módulo Reservas | Módulo Catálogo | Consulta si un equipo está activo y su precio actual para calcular el total. | Llamada en memoria (Interfaces) |
+| Rutas API | Módulos de negocio | Invoca los Casos de Uso desde los controladores después de validar el token y autorizar el rol requerido (RBAC - Admin/Cliente). | Llamada en memoria |
+| Módulo Reservas | Módulo Catálogo | Verifica el stock de equipos extra mediante `CatalogoPort` y consulta si un equipo está activo y su precio actual para calcular el total. | Llamada en memoria (Interfaces) |
 | Módulo Reservas | Módulo Pagos | Envía el total a cobrar y espera la confirmación (código de operación). | Llamada en memoria (Interfaces) |
 
 ---

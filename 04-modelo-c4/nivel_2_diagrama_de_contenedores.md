@@ -40,6 +40,8 @@ flowchart TD;
     %% Sistemas Externos
     Pasarela["Pasarela de Pago<br>[Sistema Externo]<br>Yape / Plin API"];
 
+    Mensajeria["Servicio de Mensajería (WhatsApp API / Resend)<br>[Sistema Externo]<br>Entrega comprobantes y alertas"];
+
     %% Relaciones
     Cliente -->|"Usa [HTTPS]"| WebApp;
     Admin -->|"Supervisa [HTTPS]"| WebApp;
@@ -49,6 +51,8 @@ flowchart TD;
     
     API -->|"Lee y escribe [SQL/TCP]"| BD;
     API -->|"Solicita validación de cobro [HTTPS/REST]"| Pasarela;
+
+    API -->|"Enviar comprobantes de reserva confirmada y alertas de cancelación [HTTPS/REST]"| Mensajeria;
 
     %% Estilos C4
     classDef persona fill:#08427b,color:#fff,stroke:#052e56,stroke-width:2px;
@@ -60,7 +64,7 @@ flowchart TD;
     class Cliente,Admin persona;
     class WebApp,API,Auth contenedor;
     class BD baseDatos;
-    class Pasarela externo;
+    class Pasarela,Mensajeria externo;
     class SISTEMA limite;
 ```
 
@@ -86,6 +90,7 @@ flowchart TD;
 | Aplicación web | API Backend | Envía solicitudes de reserva o consulta catálogo. | HTTPS/JSON |
 | API Backend | Base de datos | Verifica disponibilidad y guarda reservas confirmadas. | SQL sobre TCP |
 | API Backend | Pasarela de Pago (Yape) | Solicita la validación del pago o la generación del QR. | HTTPS/REST |
+| API Backend | Servicio de Mensajería (WhatsApp API / Resend) | Enviar comprobantes de reserva confirmada y alertas de cancelación. | HTTPS/REST |
 
 ---
 
@@ -105,6 +110,7 @@ flowchart TD;
 | Comunicación | Medida |
 |---|---|
 | Navegador → Aplicación web y API | Tráfico cifrado en todo momento con certificado SSL (HTTPS). |
-| Aplicación web → API Backend | Validación del token JWT en cada petición mediante middlewares (Supabase Auth). |
+| Aplicación web → API Backend | Validación del token JWT en cada petición mediante middlewares (Supabase Auth) y Validación de Roles (RBAC - Admin/Cliente). Las rutas administrativas exigen un rol de Admin validado en el token firmado, procedente de información controlada por el servidor. |
 | API Backend → Base de datos | Las políticas *Row Level Security (RLS)* garantizan que un músico solo pueda ver y modificar sus propias reservas. |
+| API Backend → Servicio de Mensajería | Comunicación HTTPS; las credenciales de WhatsApp API / Resend se almacenan en variables de entorno del servidor. |
 | API Backend → Pasarela de pago | Las credenciales (API Keys) de Yape/Plin viven seguras en las variables de entorno del servidor. |

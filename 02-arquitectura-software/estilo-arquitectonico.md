@@ -22,20 +22,22 @@ flowchart TD
             MUsuarios["Módulo Usuarios"]
             MCatalogo["Módulo Catálogo"]
             MReservas["Módulo Reservas"]
+            MPagos["Módulo Pagos"]
         end
         
-        subgraph Datos ["Capa de Datos"]
-            ORM["ORM / Consultas SQL"]
+        subgraph CapaInfra ["Capa de Infraestructura"]
+            ORM["Repositorios y Adaptadores"]
         end
         
         API --> Modulos
-        Modulos --> Datos
+        Modulos --> CapaInfra
     end
     
     BD[("🗄️ Base de Datos PostgreSQL")]
-    Pagos["💳 Pasarela de Pago Externa"]
+    ExternoPagos["💳 Pasarela de Pago Externa"]
+    ExternoMsg["💬 Servicio de Mensajería"]
     
     Cliente -- HTTP / REST --> API
-    Datos -- SQL --> BD
-    MReservas -. HTTP .-> Pagos
-
+    CapaInfra -- SQL/tsrange --> BD
+    CapaInfra -. HTTPS .-> ExternoPagos
+    CapaInfra -. HTTPS .-> ExternoMsg

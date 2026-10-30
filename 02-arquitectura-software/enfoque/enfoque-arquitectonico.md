@@ -10,7 +10,7 @@ Este enfoque organiza el sistema alrededor de las reglas de negocio y establece 
 | :--- | :--- |
 | **Patrón / enfoque** | Clean Architecture (Arquitectura Limpia). |
 | **Objetivo** | Separar las responsabilidades y controlar las dependencias para que el núcleo del negocio (el motor de reservas) no dependa de la base de datos, la interfaz o agentes externos. |
-| **¿Qué problema resuelve?** | Evita el acoplamiento técnico. Por ejemplo, si en el futuro se cambia la pasarela de pago (de Yape a MercadoPago) o la base de datos (de Supabase a Firebase), la lógica de cómo se valida una reserva o se calcula el total no tendrá que modificarse. |
+| **¿Qué problema resuelve?** | Evita el acoplamiento técnico. Por ejemplo, si en el futuro se cambia la pasarela de pago o el proveedor de correo, la lógica de cómo se valida una reserva no tendrá que modificarse. |
 | **Capas definidas** | Presentación, Aplicación, Dominio e Infraestructura. |
 | **Beneficios** | - Facilita el mantenimiento y las pruebas unitarias al aislar componentes.<br>- Permite cambiar implementaciones técnicas sin afectar reglas de negocio.<br>- Organiza el código para que un Solo Developer pueda escalarlo sin caos. |
 
@@ -18,7 +18,7 @@ Este enfoque organiza el sistema alrededor de las reglas de negocio y establece 
 
 ## Diagrama de Clean Architecture (Módulo de Reservas)
 
-El siguiente diagrama ilustra cómo fluye la información y cómo se respetan las dependencias (las flechas siempre apuntan hacia el Dominio).
+El siguiente diagrama ilustra cómo fluye la información y cómo se respetan las dependencias (las flechas continuas apuntan hacia el centro, aplicando Inversión de Dependencias).
 
 ```mermaid
 flowchart LR;
@@ -36,28 +36,26 @@ end;
 
 subgraph APLICACION ["APLICACIÓN (Casos de Uso)"]
     UC_Crear["CrearReservaUseCase"]:::APP;
-    Port_Repo["IReservaRepository (Interfaz)"]:::APP;
-    Port_Pago["IPagoService (Interfaz)"]:::APP;
 end;
 
 subgraph DOMINIO ["DOMINIO (Núcleo de Negocio)"]
     Ent_Reserva["Entidad: Reserva"]:::DOM;
-    Ent_Sala["Entidad: Sala"]:::DOM;
     Regla["Reglas: Validar Overbooking"]:::DOM;
+    Port_Repo["IReservaRepository (Puerto)"]:::DOM;
+    Port_Pago["IPagoPort (Puerto)"]:::DOM;
 end;
 
 subgraph INFRAESTRUCTURA ["INFRAESTRUCTURA (Detalles Técnicos)"]
-    Impl_Repo["ReservaRepositoryImpl (Supabase/PostgreSQL)"]:::INF;
-    Impl_Pago["PasarelaPagoAdapter (Yape/Plin API)"]:::INF;
+    Impl_Repo["SupabaseReservaRepository"]:::INF;
+    Impl_Pago["YapePagoAdapter"]:::INF;
 end;
 
 %% Relaciones (Flujo de control y dependencias)
 UI_React -->|Petición HTTP| Controller;
-Controller -->|Ejecuta| UC_Crear;
+Controller -->|Invoca| UC_Crear;
 
-UC_Crear -->|Usa| Ent_Reserva;
+UC_Crear -->|Instancia| Ent_Reserva;
 UC_Crear -->|Aplica| Regla;
-Ent_Reserva -.-> Ent_Sala;
 
 UC_Crear -->|Llama a través de interfaz| Port_Repo;
 UC_Crear -->|Llama a través de interfaz| Port_Pago;
