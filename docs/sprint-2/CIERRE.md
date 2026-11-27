@@ -1,5 +1,7 @@
 # Cierre verificable del Sprint 2
 
+Para el estado consolidado y las pruebas por tema, consultar [resultados finales](resultados-finales/README.md). Las conclusiones separan **Aprobado**, **No cumplido**, **Pendiente de validación** y **Simulado**.
+
 Este índice relaciona la entrega con el PDF `ENTREGABLE-SPRINT-2.pdf` proporcionado por el estudiante. Fecha de revisión: 26 de noviembre de 2026, America/Lima. El PDF exige implementación, Swagger, Jest/cobertura y resultados de calidad; recomienda GitHub Actions.
 
 | Punto de la consigna | Dónde revisarlo | Estado |

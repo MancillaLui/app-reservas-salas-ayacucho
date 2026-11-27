@@ -2,7 +2,7 @@
 
 Consultar [equivalencias y validación de la reorganización](ORGANIZACION.md). Los identificadores RF/HU y contratos REST se conservan; los módulos están en `src/servidor/modulos` y la interfaz en `src/cliente`.
 
-Los nombres de pruebas corresponden a los archivos de `tests/unit` y `tests/integration/postgres.test.ts`. La evidencia de ejecución y sus límites se documentan en [VALIDACION.md](VALIDACION.md).
+Los nombres de pruebas corresponden a los archivos de `tests/unit` y `tests/integration/postgres.test.ts`. Los [resultados finales](resultados-finales/README.md) y sus extractos identifican 53 unitarias, 36 de integración y 21 de navegador. [VALIDACION.md](VALIDACION.md) conserva la evolución cronológica.
 
 | RF / HU | Implementación | Validación automatizada / evidencia |
 |---|---|---|
@@ -25,8 +25,8 @@ Los nombres de pruebas corresponden a los archivos de `tests/unit` y `tests/inte
 |---|---|---|
 | AC01 Rendimiento | Consultas de catálogo y calendario responden en menos de 3 segundos; usar p95 para la medición de API. | Benchmark HTTP pequeño y script k6 hasta 2.000 VUs. El resultado de API no demuestra carga completa en 3G/4G. |
 | AC02 Disponibilidad | Meta 99,9 %; recursos y reservas conservan estado después de reiniciar la aplicación. | Reinstanciación del servicio con PostgreSQL en pruebas. Uptime mensual y recuperación del alojamiento pendientes. |
-| AC03 Seguridad | Sesión inválida y acceso a reserva ajena se deniegan; solo ADMIN modifica recursos. | Pruebas HTTP con identidad controlada y pruebas unitarias del adaptador Supabase. Token real, TLS de despliegue y revocaciones en el proyecto real pendientes de configurar. |
-| AC04 Usabilidad | Recorrido móvil: sesión → horario/sala/extras → revisión → pago → confirmación, sin desbordamiento horizontal. | Revisión de interfaz y lista manual de tareas. Sin estudio con participantes, no se acredita conversión o número óptimo de clics. |
+| AC03 Seguridad | Sesión inválida y acceso a reserva ajena se deniegan; solo ADMIN modifica recursos. | Pruebas del route handler con identidad controlada y SDK controlado en unitarias; recorrido real posterior con ambos roles y TLS de base de datos verificado. HTTPS de alojamiento público, revocaciones y auditoría completa siguen pendientes de validación. |
+| AC04 Usabilidad | Recorrido móvil: sesión → horario/sala/extras → revisión → pago → confirmación, sin desbordamiento horizontal. | 21 pruebas de navegador y revisión visual a tres anchos; capturas controladas separadas del recorrido real. Sin estudio con participantes, no se acredita conversión ni número óptimo de clics. |
 | AC05 Resiliencia | Fallo o demora de mensajería mantiene CONFIRMADA y no espera la entrega. | Inyección determinista de fallos, comprobación del estado y procesamiento diferido del worker. |
 
 ## Entregables y ubicación
@@ -39,4 +39,4 @@ Los nombres de pruebas corresponden a los archivos de `tests/unit` y `tests/inte
 | Análisis de base y caché | `docs/sprint-2/ARQUITECTURA.md`. |
 | Jest y cobertura | `npm run test:verify`; `coverage/complete`. |
 | Evidencias de atributos | `docs/sprint-2/VALIDACION.md`, informes y script k6. |
-| CI recomendado | `.github/workflows/validacion.yml`. Su ejecución en GitHub depende de publicar el repositorio; no se afirma que haya ocurrido. |
+| CI recomendado | `.github/workflows/validacion.yml`; [ejecución aprobada y revisión identificada](resultados-finales/07-conclusiones-y-pendientes.md). |

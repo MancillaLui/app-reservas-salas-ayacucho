@@ -1,5 +1,7 @@
 # Arquitectura implementada y comportamiento de datos
 
+Los [resultados finales](resultados-finales/README.md) relacionan esta implementación con sus pruebas y limitaciones. La observación de mecanismos no sustituye una medición de disponibilidad o capacidad productiva.
+
 ## Monolito modular y Clean Architecture
 
 La [organización del repositorio](ORGANIZACION.md) separa navegador, servidor y contratos compartidos. La caché se inyecta a Catálogo mediante `CachePort`; su implementación y TTL no cambiaron. PostgreSQL, la coordinación SQL y las tareas periódicas están en infraestructura del servidor.

@@ -6,6 +6,8 @@ La propuesta de reorganización está en `codex/organizacion-proyecto`. Consulta
 
 ## Sprint 2: aplicación ejecutable
 
+Consultar los [resultados finales por documentos](docs/sprint-2/resultados-finales/README.md): trabajo realizado, 53 pruebas unitarias, 36 de integración, 21 de navegador, cobertura y objetivos de calidad aprobados, no cumplidos o pendientes.
+
 Entrega publicada en la rama `codex/sprint-2-entrega`. [Validación remota aprobada del commit funcional](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473).
 
 Consulta primero el [estado de entrega y los pasos restantes](docs/sprint-2/ENTREGA.md).

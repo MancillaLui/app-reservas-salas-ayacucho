@@ -1,5 +1,7 @@
 # Sprint 2: estado y preparación de la entrega
 
+El [informe final por partes](resultados-finales/README.md) reúne qué se implementó, qué pruebas pasaron y qué metas no se alcanzaron. Distingue datos controlados, Supabase real y mediciones de rendimiento históricas.
+
 ## Implementado y comprobado
 
 - Aplicación Next.js/TypeScript con API REST, monolito modular y Clean Architecture.
@@ -10,7 +12,7 @@
 - 89 pruebas Jest aprobadas (86 previas y tres adicionales de arquitectura), 21 de navegador y reporte de cobertura.
 - Swagger/OpenAPI, SDD, trazabilidad, análisis de base de datos/caché y escenarios de calidad.
 
-Las operaciones de la demostración real se ejecutaron mediante los servicios de aplicación desde un script administrativo, no mediante una sesión de navegador. No sustituyen la revisión visual autenticada. Los datos de ejemplo quedan visibles en el panel: una reserva confirmada, otra cancelada y un equipo de prueba desactivado. Los pagos, reembolsos registrados y mensajes son simulados.
+La demostración administrativa inicial se ejecutó mediante servicios de aplicación desde un script; sus datos y resultados se conservan como evidencia de esa ejecución. Posteriormente se completó también el recorrido autenticado real descrito abajo. Son evidencias diferentes. Los pagos, reembolsos registrados y mensajes son simulados; los estados documentados no afirman que los datos operativos permanezcan inalterados después de la demostración.
 
 ## Recorrido comprobado en la interfaz
 

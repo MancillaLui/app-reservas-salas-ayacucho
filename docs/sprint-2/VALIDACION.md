@@ -1,5 +1,7 @@
 # Validación del Sprint 2
 
+Este documento conserva el historial cronológico. La [síntesis final por partes](resultados-finales/README.md) presenta el estado consolidado y aclara qué pendientes de las ejecuciones iniciales se comprobaron posteriormente.
+
 Fecha: 26 de noviembre de 2026, 18:47 (America/Lima). Entorno: Windows, Node.js v24.22.1, Next.js compilado para producción y PostgreSQL 17 temporal en loopback. El catálogo de carga tiene dos salas y tres equipos, sin reservas. No se utilizaron credenciales reales de Supabase.
 
 ## Comprobaciones funcionales
