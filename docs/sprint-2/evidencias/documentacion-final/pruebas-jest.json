@@ -1,0 +1,706 @@
+{
+  "origen": "test-results/jest-organizacion.json",
+  "sha256Origen": "e7c81762962e05c14e8bb74dc35229591b3e620d9b51f3e9c07eb287d5edd0b9",
+  "metodo": "Extracción de campos permitidos del reporte existente. No se volvieron a ejecutar pruebas.",
+  "inicioLima": "2026-11-27T10:07:48.085000-05:00",
+  "zonaHoraria": "America/Lima (UTC-05:00)",
+  "entorno": "Windows; Jest y PostgreSQL 17 temporal aislado. Identidad y proveedores controlados en pruebas.",
+  "revisionCodigoPublicadaConCI": "79ee1690b2c2bf675f49b36f7728480a9835b3c6",
+  "notaRevision": "El reporte local se produjo durante la preparación de la reorganización, antes de su commit. CI verificó posteriormente esa revisión publicada; no se atribuye el archivo local a una ejecución de CI.",
+  "totales": {
+    "unitarias": 53,
+    "integracion": 36,
+    "jest": 89,
+    "suites": 7,
+    "fallidas": 0,
+    "omitidas": 0
+  },
+  "suites": [
+    {
+      "archivo": "tests/unit/reglas.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:59.585000-05:00",
+      "finLima": "2026-11-27T10:07:59.675000-05:00",
+      "aprobadas": 29,
+      "casos": [
+        {
+          "id": "U01",
+          "nombre": "valida intervalos futuros con desplazamiento explícito",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U02",
+          "nombre": "rechaza intervalo inválido fecha inválida / 2026-12-01T19:30:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 8
+        },
+        {
+          "id": "U03",
+          "nombre": "rechaza intervalo inválido 2026-12-01T18:00:00 / 2026-12-01T19:30:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U04",
+          "nombre": "rechaza intervalo inválido 2026-12-01T18:00:00-05:00 / 2026-12-01T18:00:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U05",
+          "nombre": "rechaza intervalo inválido 2026-12-01T19:30:00-05:00 / 2026-12-01T18:00:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U06",
+          "nombre": "rechaza intervalo inválido 2026-11-25T18:00:00-05:00 / 2026-12-01T19:30:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U07",
+          "nombre": "rechaza intervalo inválido 2026-12-01T18:00:00-05:00 / 2026-12-03T18:00:00-05:00",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U08",
+          "nombre": "calcula 90 minutos y extras por ensayo en céntimos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U09",
+          "nombre": "redondea una duración fraccionaria a céntimos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U10",
+          "nombre": "rechaza total no positivo",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 2
+        },
+        {
+          "id": "U11",
+          "nombre": "permite reservas sin equipos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U12",
+          "nombre": "rechaza cantidad 0",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U13",
+          "nombre": "rechaza cantidad -1",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U14",
+          "nombre": "rechaza cantidad 1.5",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U15",
+          "nombre": "rechaza cantidad NaN",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U16",
+          "nombre": "rechaza equipos duplicados",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U17",
+          "nombre": "el propietario puede ver su reserva",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U18",
+          "nombre": "no permite ver reservas ajenas",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U19",
+          "nombre": "administrador puede consultar reservas de cualquier cliente",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U20",
+          "nombre": "cliente puede cancelar antes del inicio",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U21",
+          "nombre": "cliente no puede cancelar después del inicio",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U22",
+          "nombre": "administrador puede cancelar por fuerza mayor después del inicio",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U23",
+          "nombre": "no cancela estado CANCELADA",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U24",
+          "nombre": "no cancela estado EXPIRADA",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U25",
+          "nombre": "no cancela estado PROCESANDO",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U26",
+          "nombre": "no cancela un bloqueo por el flujo de reservas",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U27",
+          "nombre": "permite pagar una reserva vigente",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U28",
+          "nombre": "no paga al alcanzar exactamente el vencimiento",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U29",
+          "nombre": "no paga una reserva confirmada",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        }
+      ]
+    },
+    {
+      "archivo": "tests/unit/servicios.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:59.474000-05:00",
+      "finLima": "2026-11-27T10:07:59.576000-05:00",
+      "aprobadas": 11,
+      "casos": [
+        {
+          "id": "U30",
+          "nombre": "crea una reserva con entrada válida",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 2
+        },
+        {
+          "id": "U31",
+          "nombre": "consulta propiedad antes de devolver el detalle",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U32",
+          "nombre": "pago aprobado confirma y programa un comprobante",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U33",
+          "nombre": "pago rechazado cancela y no envía confirmación",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U34",
+          "nombre": "resultado incierto conserva recursos y no confirma",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U35",
+          "nombre": "repetir un pago terminado no vuelve a cobrar",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U36",
+          "nombre": "fallo al configurar envío no revierte confirmación persistida",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U37",
+          "nombre": "usuarios rechaza solicitudes sin Bearer",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 12
+        },
+        {
+          "id": "U38",
+          "nombre": "usuarios delega verificación del token al proveedor",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U39",
+          "nombre": "catálogo filtra categorías y oculta inactivos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U40",
+          "nombre": "catálogo niega mutaciones al cliente",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        }
+      ]
+    },
+    {
+      "archivo": "tests/unit/schemas.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:58.432000-05:00",
+      "finLima": "2026-11-27T10:07:58.615000-05:00",
+      "aprobadas": 4,
+      "casos": [
+        {
+          "id": "U41",
+          "nombre": "la entrada no acepta precios ni clienteId del navegador",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U42",
+          "nombre": "rechaza equipos con cantidades fraccionarias",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U43",
+          "nombre": "rechaza precios no enteros en catálogo",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U44",
+          "nombre": "pago solo acepta escenarios explícitos del simulador",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        }
+      ]
+    },
+    {
+      "archivo": "tests/unit/identidad.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:59.680000-05:00",
+      "finLima": "2026-11-27T10:07:59.735000-05:00",
+      "aprobadas": 2,
+      "casos": [
+        {
+          "id": "U45",
+          "nombre": "ignora rol de user_metadata y consulta rol controlado por el servidor",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U46",
+          "nombre": "un token rechazado por Supabase no accede a los perfiles",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        }
+      ]
+    },
+    {
+      "archivo": "tests/unit/cache.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:59.740000-05:00",
+      "finLima": "2026-11-27T10:07:59.807000-05:00",
+      "aprobadas": 3,
+      "casos": [
+        {
+          "id": "U47",
+          "nombre": "reutiliza catálogo hasta el TTL y recarga después",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U48",
+          "nombre": "invalidación recarga antes del TTL",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 0
+        },
+        {
+          "id": "U49",
+          "nombre": "una carga antigua no repuebla una caché invalidada",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        }
+      ]
+    },
+    {
+      "archivo": "tests/unit/arquitectura.test.ts",
+      "tipo": "unitarias",
+      "inicioLima": "2026-11-27T10:07:58.623000-05:00",
+      "finLima": "2026-11-27T10:07:59.466000-05:00",
+      "aprobadas": 4,
+      "casos": [
+        {
+          "id": "U50",
+          "nombre": "dominio y aplicación no importan infraestructura, framework ni SDK",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 34
+        },
+        {
+          "id": "U51",
+          "nombre": "el navegador no importa servidor, PostgreSQL ni APIs exclusivas de Node",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 267
+        },
+        {
+          "id": "U52",
+          "nombre": "contratos y dominio compartidos son independientes de SDK, framework y servidor",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 1
+        },
+        {
+          "id": "U53",
+          "nombre": "la comprobación de límites resuelve aliases y rutas relativas al mismo archivo",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 38
+        }
+      ]
+    },
+    {
+      "archivo": "tests/integration/postgres.test.ts",
+      "tipo": "integracion",
+      "inicioLima": "2026-11-27T10:07:48.422000-05:00",
+      "finLima": "2026-11-27T10:07:58.412000-05:00",
+      "aprobadas": 36,
+      "casos": [
+        {
+          "id": "I01",
+          "nombre": "crea con precios reales y calcula 90 minutos más extras",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 105
+        },
+        {
+          "id": "I02",
+          "nombre": "20 solicitudes simultáneas a la misma sala: exactamente una gana",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 306
+        },
+        {
+          "id": "I03",
+          "nombre": "dos salas compiten por el último equipo: solo una lo recibe",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 120
+        },
+        {
+          "id": "I04",
+          "nombre": "la restricción SQL impide cruces incluso sin el servicio",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 87
+        },
+        {
+          "id": "I05",
+          "nombre": "intervalos consecutivos comparten sala y equipo sin conflicto",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 81
+        },
+        {
+          "id": "I06",
+          "nombre": "stock usa el pico simultáneo, no suma reservas consecutivas",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 91
+        },
+        {
+          "id": "I07",
+          "nombre": "pago aprobado persiste confirmación y comprobante atómicamente",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 90
+        },
+        {
+          "id": "I08",
+          "nombre": "pago rechazado libera sala y equipo",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 97
+        },
+        {
+          "id": "I09",
+          "nombre": "pagos simultáneos e idempotencia producen un único intento",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 241
+        },
+        {
+          "id": "I10",
+          "nombre": "resultado incierto no libera ni repite el cobro; admin concilia",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 124
+        },
+        {
+          "id": "I11",
+          "nombre": "worker expira pendientes y libera cantidades",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 108
+        },
+        {
+          "id": "I12",
+          "nombre": "worker no expira pagos en proceso tras un reinicio del servicio",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 112
+        },
+        {
+          "id": "I13",
+          "nombre": "fallo de mensajería no altera reserva y registra fallo de entrega",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 117
+        },
+        {
+          "id": "I14",
+          "nombre": "demora de mensajería ocurre después de responder al pago",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 2098
+        },
+        {
+          "id": "I15",
+          "nombre": "cancelación de pago confirmado libera recursos y registra reembolso",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 148
+        },
+        {
+          "id": "I16",
+          "nombre": "cliente ajeno no ve ni cancela ni paga la reserva",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 119
+        },
+        {
+          "id": "I17",
+          "nombre": "bloqueo manual impide reservar; desbloquear vuelve a habilitar",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 127
+        },
+        {
+          "id": "I18",
+          "nombre": "no bloquea una sala con reservas existentes",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 144
+        },
+        {
+          "id": "I19",
+          "nombre": "CRUD invalida caché y no desactiva recursos comprometidos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 149
+        },
+        {
+          "id": "I20",
+          "nombre": "REST rechaza sesión ausente e inválida",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 137
+        },
+        {
+          "id": "I21",
+          "nombre": "REST rechaza cliente en ruta administrativa",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 139
+        },
+        {
+          "id": "I22",
+          "nombre": "REST crea reserva, consulta y devuelve conflicto sobre el mismo horario",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 172
+        },
+        {
+          "id": "I23",
+          "nombre": "REST rechaza suplantación y precio enviado por el navegador",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 108
+        },
+        {
+          "id": "I24",
+          "nombre": "REST publica Swagger y disponibilidad con cantidades reales",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 123
+        },
+        {
+          "id": "I25",
+          "nombre": "todas las tablas de negocio tienen RLS habilitado",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 110
+        },
+        {
+          "id": "I26",
+          "nombre": "REST salud, identidad y listados públicos funcionan",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 113
+        },
+        {
+          "id": "I27",
+          "nombre": "REST lista solo las reservas propias y permite agenda administrativa",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 100
+        },
+        {
+          "id": "I28",
+          "nombre": "REST paga con clave, devuelve confirmación y permite cancelar",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 124
+        },
+        {
+          "id": "I29",
+          "nombre": "REST administra salas y equipos con baja lógica",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 166
+        },
+        {
+          "id": "I30",
+          "nombre": "REST permite bloquear y desbloquear una sala",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 107
+        },
+        {
+          "id": "I31",
+          "nombre": "REST muestra conflicto SQL en un bloqueo que se superpone",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 109
+        },
+        {
+          "id": "I32",
+          "nombre": "REST concilia pago incierto y lista comprobantes",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 118
+        },
+        {
+          "id": "I33",
+          "nombre": "REST rechaza JSON roto, cuerpos grandes y UUID inválido",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 69
+        },
+        {
+          "id": "I34",
+          "nombre": "REST devuelve 404 en rutas desconocidas y recursos ausentes",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 80
+        },
+        {
+          "id": "I35",
+          "nombre": "calendario público entrega ocupación sin identidades ni motivos",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 144
+        },
+        {
+          "id": "I36",
+          "nombre": "REST traduce una caída de base de datos a 503",
+          "estado": "Aprobado",
+          "estadoJest": "passed",
+          "duracionMs": 83
+        }
+      ]
+    }
+  ]
+}

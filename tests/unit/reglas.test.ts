@@ -1,5 +1,5 @@
-import { calcularTotal,puedeVer,validarCancelacion,validarEquipos,validarIntervalo,validarPendiente } from '../../src/modulos/reservas/dominio/reglas';
-import type { Actor,Reserva } from '../../src/shared/tipos';
+import { calcularTotal,puedeVer,validarCancelacion,validarEquipos,validarIntervalo,validarPendiente } from '../../src/servidor/modulos/reservas/dominio/reglas';
+import type { Actor,Reserva } from '../../src/compartido/contratos/tipos';
 const ahora=Date.parse('2026-11-26T12:00:00-05:00');
 const inicio='2026-12-01T18:00:00-05:00',fin='2026-12-01T19:30:00-05:00';
 const cliente:Actor={id:'cliente',role:'CLIENTE'},admin:Actor={id:'admin',role:'ADMIN'};

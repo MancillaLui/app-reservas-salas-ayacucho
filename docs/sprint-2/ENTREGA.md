@@ -1,5 +1,7 @@
 # Sprint 2: estado y preparación de la entrega
 
+El [informe final por partes](resultados-finales/README.md) reúne qué se implementó, qué pruebas pasaron y qué metas no se alcanzaron. Distingue datos controlados, Supabase real y mediciones de rendimiento históricas.
+
 ## Implementado y comprobado
 
 - Aplicación Next.js/TypeScript con API REST, monolito modular y Clean Architecture.
@@ -7,10 +9,10 @@
 - Dos cuentas verificadas en Supabase: un ADMIN y un CLIENTE, ambos con correo confirmado. [Evidencia de solo lectura](evidencias/cuentas.json).
 - Reserva confirmada de demostración: 27 de noviembre de 2026, 18:00–20:00, hora de Lima, sala y un micrófono, total S/70. No existe cobro bancario.
 - Comprobante persistido con entrega simulada, fallo de mensajería aislado, cancelación y liberación de recursos, bloqueo/desbloqueo y alta/edición/desactivación de un equipo de prueba.
-- 86 pruebas Jest aprobadas y reporte de cobertura; TypeScript aprobado después de la demostración.
+- 89 pruebas Jest aprobadas (86 previas y tres adicionales de arquitectura), 21 de navegador y reporte de cobertura.
 - Swagger/OpenAPI, SDD, trazabilidad, análisis de base de datos/caché y escenarios de calidad.
 
-Las operaciones de la demostración real se ejecutaron mediante los servicios de aplicación desde un script administrativo, no mediante una sesión de navegador. No sustituyen la revisión visual autenticada. Los datos de ejemplo quedan visibles en el panel: una reserva confirmada, otra cancelada y un equipo de prueba desactivado. Los pagos, reembolsos registrados y mensajes son simulados.
+La demostración administrativa inicial se ejecutó mediante servicios de aplicación desde un script; sus datos y resultados se conservan como evidencia de esa ejecución. Posteriormente se completó también el recorrido autenticado real descrito abajo. Son evidencias diferentes. Los pagos, reembolsos registrados y mensajes son simulados; los estados documentados no afirman que los datos operativos permanezcan inalterados después de la demostración.
 
 ## Recorrido comprobado en la interfaz
 
@@ -54,3 +56,7 @@ La corrida de 20 VUs pasó sin errores; la corrida extrema de 2.000 VUs no cumpl
 La presentación final utiliza un [tema de estudio musical oscuro](TEMA-OSCURO.md). La revisión visual y sus nuevas capturas se separan de las evidencias reales del recorrido funcional, que se conservaron sin cambios.
 
 Consultar [CIERRE.md](CIERRE.md) para la revisión contra la consigna, el empaquetado sin secretos y los pasos de GitHub. El [guion actualizado](EXPOSICION.md) sustituye al guion histórico del Sprint 1. La autorización de GitHub se completó; la rama está publicada y la primera validación remota pasó.
+
+## Organización del repositorio
+
+La propuesta [reorganiza carpetas y scripts](ORGANIZACION.md), conserva los contratos y los resultados históricos, e incluye su informe independiente. La rama de entrega se conserva durante la revisión de `codex/organizacion-proyecto`.

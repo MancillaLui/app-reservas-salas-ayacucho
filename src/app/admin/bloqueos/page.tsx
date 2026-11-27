@@ -1,2 +1,2 @@
-import {BloqueosAdmin} from '../../../presentacion/admin/bloqueos';
+import {BloqueosAdmin} from '../../../cliente/presentacion/admin/bloqueos';
 export default function Page(){return <BloqueosAdmin/>;}

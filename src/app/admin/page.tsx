@@ -1,2 +1,2 @@
-import {ResumenAdmin} from '../../presentacion/admin/resumen';
+import {ResumenAdmin} from '../../cliente/presentacion/admin/resumen';
 export default function Page(){return <ResumenAdmin/>;}

@@ -1,2 +1,2 @@
-import {FormularioAuth} from '../../presentacion/autenticacion/formulario';
+import {FormularioAuth} from '../../cliente/presentacion/autenticacion/formulario';
 export default function Page(){return <FormularioAuth registro/>;}

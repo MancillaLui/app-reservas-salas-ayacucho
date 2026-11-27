@@ -1,4 +1,4 @@
-import { Cache } from '../../src/shared/cache';
+import { Cache } from '../../src/servidor/infraestructura/cache/cache';
 test('reutiliza catálogo hasta el TTL y recarga después',async()=>{let time=0;const c=new Cache<number>(30000,()=>time);const load=jest.fn().mockResolvedValueOnce(1).mockResolvedValueOnce(2);expect(await c.get(load)).toBe(1);time=29999;expect(await c.get(load)).toBe(1);time=30000;expect(await c.get(load)).toBe(2);expect(load).toHaveBeenCalledTimes(2);});
 test('invalidación recarga antes del TTL',async()=>{const c=new Cache<number>();const load=jest.fn().mockResolvedValueOnce(1).mockResolvedValueOnce(2);await c.get(load);c.invalidate();expect(await c.get(load)).toBe(2);});
 test('una carga antigua no repuebla una caché invalidada',async()=>{const c=new Cache<number>();let resolve!:(n:number)=>void;const first=c.get(()=>new Promise<number>(r=>{resolve=r;}));c.invalidate();resolve(1);await first;expect(await c.get(async()=>2)).toBe(2);});

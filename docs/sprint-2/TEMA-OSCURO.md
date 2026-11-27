@@ -13,7 +13,7 @@ La presentación pública, el acceso, el asistente de reserva y ambos paneles co
 
 ## Componentes y accesibilidad
 
-Las variables compartidas de `src/app/tema.css` definen fondos, texto, campos, estados y acciones. Tarjetas, tablas, filtros, calendario, menú móvil y modales usan esas variables. Los estados conservan su texto y añaden indicadores a confirmación, cancelación y errores; la selección también utiliza borde, fondo y atributos accesibles existentes.
+Las variables compartidas de `src/cliente/estilos/tema.css` definen fondos, texto, campos, estados y acciones. Tarjetas, tablas, filtros, calendario, menú móvil y modales usan esas variables. Los estados conservan su texto y añaden indicadores a confirmación, cancelación y errores; la selección también utiliza borde, fondo y atributos accesibles existentes.
 
 Los controles nativos usan `color-scheme: dark`, el foco de teclado tiene contorno visible y los botones deshabilitados conservan texto legible. No se anima el color de fondo de los botones: al habilitar el pago, animar el fondo mientras el texto cambiaba inmediatamente generaba un intervalo de contraste insuficiente. Los horarios distribuyen sus campos según el espacio disponible para evitar truncar fecha y hora en tableta.
 
@@ -33,6 +33,6 @@ Las nuevas pruebas visuales usan sesiones y API interceptadas con fixtures contr
 - [Cliente](evidencias/tema-oscuro/cliente-1365.png) y [administrador](evidencias/tema-oscuro/admin-1365.png).
 - [Reserva móvil](evidencias/tema-oscuro/reserva-390.png), [modal](evidencias/tema-oscuro/modal-catalogo.png), [confirmación](evidencias/tema-oscuro/confirmacion-admin.png), [error](evidencias/tema-oscuro/error-sesion.png), [pago pendiente](evidencias/tema-oscuro/pago-pendiente.png) y [vencido](evidencias/tema-oscuro/pago-vencido.png).
 
-Para reproducir: compilar con `npm run build`, servir en el puerto 3001, ejecutar `npm run test:browser` con `BASE_URL=http://127.0.0.1:3001`, ejecutar las pruebas backend con salida JSON `npm run test:verify -- --json --outputFile=test-results/jest-oscuro.json` y generar la selección de evidencia con `npx tsx scripts/evidencia-tema.ts`. El empaquetado sigue usando `npm run delivery:prepare`.
+Para reproducir: compilar con `npm run build`, servir en el puerto 3001, ejecutar `npm run test:browser` con `BASE_URL=http://127.0.0.1:3001`, ejecutar las pruebas backend con salida JSON `npm run test:verify -- --json --outputFile=test-results/jest-oscuro.json` y generar la selección de evidencia con `npx tsx scripts/entrega/evidencia-tema.ts`. El empaquetado sigue usando `npm run delivery:prepare`.
 
 Pagos y mensajería siguen simulados. No se repitió la carga, no cambia el límite documentado de 2.000 VUs ni se acredita disponibilidad mensual.

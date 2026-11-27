@@ -10,7 +10,7 @@ Mostrar el inicio. Las imágenes son ilustraciones; pagos y mensajes son simulad
 
 ## 1:00-3:00 - Arquitectura implementada
 
-Mostrar C4 nivel 2 y la estructura `src/modulos`. Next.js contiene presentación y API REST, en un monolito modular con Usuarios, Catálogo, Reservas y Pagos. Supabase proporciona Auth y PostgreSQL. Dentro de cada módulo, las reglas y contratos se separan de los adaptadores e infraestructura siguiendo Clean Architecture.
+Mostrar C4 nivel 2 y la estructura `src/servidor/modulos`. Next.js contiene presentación y API REST, en un monolito modular con Usuarios, Catálogo, Reservas y Pagos. Supabase proporciona Auth y PostgreSQL. Dentro de cada módulo, las reglas y contratos se separan de los adaptadores e infraestructura siguiendo Clean Architecture.
 
 «Separar cliente y administrador no crea dos backends. Ambas interfaces consumen la misma API. La sesión, el rol y la propiedad se validan en el servidor.»
 
@@ -35,7 +35,7 @@ Explicar el envío asíncrono: confirmar una reserva no depende del resultado de
 
 ## 8:00-10:00 - Pruebas y atributos
 
-Mostrar Swagger y el informe `VALIDACION.md`. Hay 86 pruebas backend aprobadas, siete suites y cobertura de líneas de 99,45 % en backend/contratos; no en todo React. Las 15 pruebas de navegador incluyen sesiones privadas controladas. Diferenciar esas evidencias de las capturas autenticadas reales, si se han completado.
+Mostrar Swagger y el informe `VALIDACION.md`. Hay 89 pruebas backend aprobadas (86 previas y tres adicionales de arquitectura), siete suites y cobertura de líneas de 99,45 % en backend/contratos; no en todo React. Las 21 pruebas de navegador incluyen sesiones privadas controladas y revisión del tema oscuro. Diferenciar esas evidencias de las capturas autenticadas reales, si se han completado.
 
 Mostrar pruebas concurrentes de sala y último equipo, rechazo de acceso ajeno y aislamiento de fallos de proveedores. La caché de 30 segundos solo cubre catálogo; disponibilidad y asignación consultan PostgreSQL.
 
