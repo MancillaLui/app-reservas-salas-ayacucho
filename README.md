@@ -1,5 +1,9 @@
 # App Web de Reservas de Salas de Ensayo y Equipos - Ayacucho
 
+## Prototipo e interfaz aprobada
+
+Ejecuta `npm run prototipo` y abre <http://127.0.0.1:4173>. El [prototipo independiente](prototipos/interfaz-ensaya/README.md) permite explorar músico y administrador con datos ficticios. Su diseño aprobado se adaptó a la aplicación real: [navegación, pruebas y evidencias](docs/sprint-2/INTERFAZ-INTUITIVA.md). El selector de rol permanece exclusivamente en el prototipo.
+
 ## Organización del repositorio
 
 La propuesta de reorganización está en `codex/organizacion-proyecto`. Consultar [estructura y equivalencias](docs/sprint-2/ORGANIZACION.md): rutas en `src/app`, frontend en `src/cliente`, backend en `src/servidor`, contratos puros en `src/compartido` y arquitectura en `docs/arquitectura`. Los comandos npm existentes se mantienen.

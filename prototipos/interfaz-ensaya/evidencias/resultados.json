@@ -1,0 +1,319 @@
+{
+  "fecha": "2026-11-27T19:58:35.969Z",
+  "entorno": "Chrome headless local; datos ficticios relativos a fecha de ejecución; servidor estático Node.js",
+  "casos": 18,
+  "resultados": [
+    {
+      "caso": "Inicio de músico con próximo ensayo, pendiente y fuentes locales",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Horario inválido muestra error comprensible",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Sala ocupada deshabilitada y selección conservada al recargar",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Equipos opcionales, cantidades e importe; vuelta sin pérdida",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Pago aprobado crea reserva y comprobante pendiente",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Cancelación requiere motivo, atrapa foco y registra reembolso pendiente",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Pago rechazado libera recursos con explicación",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Vencimiento explícito libera el horario",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Pago incierto conserva reserva y se concilia desde administración",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Agenda y listado con filtros y estado vacío",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Catálogo: crear, buscar, editar, desactivar y activar recurso",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "No se desactiva una sala con reserva futura",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Bloqueo rechaza cruces, permite otro horario y confirma desbloqueo",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Comprobantes: detalle, procesamiento simulado y fallos separados",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Ayuda por rol, historial y restauración sin credenciales",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Interfaz adaptable de ambos roles en 1365, 768 y 390 px; capturas y contraste",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Menús móviles, foco de teclado y resumen desplegable",
+      "estado": "Aprobado"
+    },
+    {
+      "caso": "Aislamiento: ninguna petición externa, errores JS ni conexión a servicios",
+      "estado": "Aprobado"
+    }
+  ],
+  "contraste": {
+    "muestras": 955,
+    "minimo": 6.8528810498008905,
+    "vistas": [
+      {
+        "role": "musico",
+        "screen": "inicio",
+        "width": 1365,
+        "count": 28,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservar",
+        "width": 1365,
+        "count": 24,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservas",
+        "width": 1365,
+        "count": 31,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "ayuda",
+        "width": 1365,
+        "count": 25,
+        "min": 7.95050264674654
+      },
+      {
+        "role": "admin",
+        "screen": "inicio",
+        "width": 1365,
+        "count": 75,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "reservas",
+        "width": 1365,
+        "count": 31,
+        "min": 6.8528810498008905
+      },
+      {
+        "role": "admin",
+        "screen": "catalogo",
+        "width": 1365,
+        "count": 57,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "bloqueos",
+        "width": 1365,
+        "count": 29,
+        "min": 8.272098759103612
+      },
+      {
+        "role": "admin",
+        "screen": "pagos",
+        "width": 1365,
+        "count": 32,
+        "min": 7.916672492782124
+      },
+      {
+        "role": "admin",
+        "screen": "comprobantes",
+        "width": 1365,
+        "count": 29,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "ayuda",
+        "width": 1365,
+        "count": 28,
+        "min": 7.95050264674654
+      },
+      {
+        "role": "musico",
+        "screen": "inicio",
+        "width": 768,
+        "count": 21,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservar",
+        "width": 768,
+        "count": 14,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservas",
+        "width": 768,
+        "count": 24,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "ayuda",
+        "width": 768,
+        "count": 18,
+        "min": 7.95050264674654
+      },
+      {
+        "role": "admin",
+        "screen": "inicio",
+        "width": 768,
+        "count": 65,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "reservas",
+        "width": 768,
+        "count": 21,
+        "min": 6.8528810498008905
+      },
+      {
+        "role": "admin",
+        "screen": "catalogo",
+        "width": 768,
+        "count": 47,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "bloqueos",
+        "width": 768,
+        "count": 19,
+        "min": 8.272098759103612
+      },
+      {
+        "role": "admin",
+        "screen": "pagos",
+        "width": 768,
+        "count": 22,
+        "min": 7.916672492782124
+      },
+      {
+        "role": "admin",
+        "screen": "comprobantes",
+        "width": 768,
+        "count": 19,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "ayuda",
+        "width": 768,
+        "count": 18,
+        "min": 7.95050264674654
+      },
+      {
+        "role": "musico",
+        "screen": "inicio",
+        "width": 390,
+        "count": 21,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservar",
+        "width": 390,
+        "count": 14,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "musico",
+        "screen": "reservas",
+        "width": 390,
+        "count": 19,
+        "min": 7.520486707154813
+      },
+      {
+        "role": "musico",
+        "screen": "ayuda",
+        "width": 390,
+        "count": 18,
+        "min": 7.95050264674654
+      },
+      {
+        "role": "admin",
+        "screen": "inicio",
+        "width": 390,
+        "count": 60,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "reservas",
+        "width": 390,
+        "count": 21,
+        "min": 6.8528810498008905
+      },
+      {
+        "role": "admin",
+        "screen": "catalogo",
+        "width": 390,
+        "count": 47,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "bloqueos",
+        "width": 390,
+        "count": 19,
+        "min": 8.272098759103612
+      },
+      {
+        "role": "admin",
+        "screen": "pagos",
+        "width": 390,
+        "count": 22,
+        "min": 7.916672492782124
+      },
+      {
+        "role": "admin",
+        "screen": "comprobantes",
+        "width": 390,
+        "count": 19,
+        "min": 7.331267337217903
+      },
+      {
+        "role": "admin",
+        "screen": "ayuda",
+        "width": 390,
+        "count": 18,
+        "min": 7.95050264674654
+      }
+    ]
+  },
+  "peticionesExternas": [],
+  "erroresJavaScript": [],
+  "limitaciones": "Pruebas de prototipo. No prueban backend, autenticación, WCAG completo ni capacidad de producción."
+}

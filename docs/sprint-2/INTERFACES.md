@@ -1,5 +1,7 @@
 # Interfaces por rol de ENSAYA
 
+Actualización posterior: [interfaz intuitiva integrada y validación de 25 pruebas de navegador](INTERFAZ-INTUITIVA.md). Las cifras y capturas anteriores conservan su fecha histórica.
+
 La presentación actual usa un [tema musical oscuro compartido](TEMA-OSCURO.md). Las capturas de `evidencias/interfaces` y `evidencias/recorrido-real` se conservan como registros del diseño previo; las nuevas capturas visuales están separadas en `evidencias/tema-oscuro` y usan fixtures controlados.
 
 ## Organización implementada

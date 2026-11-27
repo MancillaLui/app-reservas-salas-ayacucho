@@ -1,5 +1,7 @@
 # Guion de exposición - Sprint 2 ENSAYA
 
+Actualización posterior: [interfaz intuitiva integrada y validación de 25 pruebas de navegador](INTERFAZ-INTUITIVA.md). Las cifras y capturas anteriores conservan su fecha histórica.
+
 Duración sugerida: 12 minutos, ajustable a las indicaciones del docente. El PDF del Sprint 2 no establece esta duración. Preparar la aplicación y el worker antes de comenzar; no proyectar `.env.local` ni las herramientas de sesión del navegador.
 
 ## 0:00-1:00 - Problema y resultado

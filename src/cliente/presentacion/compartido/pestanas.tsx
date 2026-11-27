@@ -1,0 +1,2 @@
+'use client';
+export function Pestanas({opciones,valor,cambiar}:{opciones:{id:string;nombre:string;cantidad?:number}[];valor:string;cambiar:(id:string)=>void}){return <div className="pestanas" aria-label="Seleccionar vista">{opciones.map(o=><button key={o.id} type="button" aria-pressed={valor===o.id} onClick={()=>cambiar(o.id)}>{o.nombre}{o.cantidad!==undefined&&<span aria-hidden="true">{o.cantidad}</span>}</button>)}</div>;}

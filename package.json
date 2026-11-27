@@ -6,6 +6,8 @@
     "node": ">=22"
   },
   "scripts": {
+    "prototipo": "node prototipos/interfaz-ensaya/servir.mjs",
+    "prototipo:validar": "node prototipos/interfaz-ensaya/validar.mjs",
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
