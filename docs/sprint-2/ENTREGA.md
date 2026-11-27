@@ -1,5 +1,7 @@
 # Sprint 2: estado y preparación de la entrega
 
+Actualización posterior: [interfaz intuitiva integrada y validación de 25 pruebas de navegador](INTERFAZ-INTUITIVA.md). Las cifras y capturas anteriores conservan su fecha histórica.
+
 El [informe final por partes](resultados-finales/README.md) reúne qué se implementó, qué pruebas pasaron y qué metas no se alcanzaron. Distingue datos controlados, Supabase real y mediciones de rendimiento históricas.
 
 ## Implementado y comprobado

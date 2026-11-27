@@ -1,0 +1,210 @@
+{
+  "fecha": "2026-11-27T20:18:42.865239+00:00",
+  "entorno": "Chrome headless, compilación de producción local en localhost:3001. Fixtures de sesión y API privadas; catálogo público y Swagger contra la aplicación.",
+  "navegador": {
+    "casos": 25,
+    "detalle": [
+      {
+        "nombre": "cliente tiene su espacio y no consulta endpoints administrativos",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "sin sesión se redirige a ingresar sin cargar datos privados",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "administrador tiene resumen y agenda con filtros",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "catálogo convierte soles a céntimos y tiene formularios independientes",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "bloqueos se crean y retiran desde su propio formulario",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "selección sobrevive al acceso y el cliente completa pago",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "cierre de sesión retira el panel y su acceso directo",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "panel y menú administrativo se adaptan a móvil",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "retorno externo se ignora al ingresar y se dirige por rol",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "cliente cancela desde el detalle con confirmación y motivo",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "pagos y comprobantes usan sus pantallas y contratos",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "error al verificar sesión no carga ni muestra datos administrativos",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "músico encuentra pestañas e instrucciones sin consultar administración",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "agenda diaria conserva listado y filtros sobre las reservas devueltas",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "pestañas de pagos y comprobantes utilizan los datos de API",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "móvil tiene tarjetas, navegación del músico y resumen desplegable",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "inicio musical y reserva pública conservada al ir a ingresar",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "sitio y reserva móvil sin desbordamiento",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "Swagger conserva las 26 operaciones",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "tema oscuro: público y autenticación en escritorio, tableta y móvil",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "tema oscuro: páginas de CLIENTE y contraste a tres anchos",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "tema oscuro: páginas de ADMIN y contraste a tres anchos",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "tema oscuro: modal, confirmación, vacío y error mantienen legibilidad",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "tema oscuro: carga, pago pendiente, vencimiento y cancelación tienen estados legibles",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      },
+      {
+        "nombre": "Swagger conserva esquema claro independiente del tema oscuro",
+        "estado": "Aprobado",
+        "resultados": [
+          "passed"
+        ]
+      }
+    ]
+  },
+  "jest": {
+    "unitarias": 53,
+    "integracion": 36,
+    "total": 89,
+    "estado": "Aprobado",
+    "base": "PostgreSQL 17 temporal aislado",
+    "cobertura": {
+      "lineas": 99.45,
+      "sentencias": 98.3,
+      "funciones": 98.16,
+      "ramas": 91.59
+    },
+    "alcance": "Backend y contratos; excluye React y composición."
+  },
+  "revisionManual": {
+    "fuente": "Confirmación del usuario en esta conversación",
+    "resultado": "Ambos accesos funcionan",
+    "alcance": "Inicio de sesión de músico y administrador, consulta de reservas y ayuda; sin capturas automáticas de estas sesiones.",
+    "limitacion": "No equivale a repetir el recorrido real completo de reserva, pago y cancelación."
+  },
+  "capturas": "Fixtures controlados; no son capturas de las cuentas reales.",
+  "limites": [
+    "Pagos y mensajería simulados.",
+    "No se repitió carga ni observación mensual de disponibilidad.",
+    "La revisión de accesibilidad no constituye auditoría WCAG completa."
+  ]
+}

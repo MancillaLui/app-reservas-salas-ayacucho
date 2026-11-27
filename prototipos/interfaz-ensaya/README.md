@@ -1,6 +1,6 @@
 # ENSAYA: prototipo navegable de interfaz
 
-Propuesta en revisión en `codex/prototipo-interfaz`. **No está integrada en `main` ni sustituye la interfaz actual.** Las pantallas utilizan exclusivamente datos ficticios y almacenamiento de sesión del navegador. No se conecta a Supabase, API, correo ni pasarelas de pago.
+Propuesta en revisión en `codex/prototipo-interfaz`. Este artefacto sigue siendo independiente; su diseño aprobado se adaptó al frontend real según [la guía de integración](../../docs/sprint-2/INTERFAZ-INTUITIVA.md). Las pantallas utilizan exclusivamente datos ficticios y almacenamiento de sesión del navegador. No se conecta a Supabase, API, correo ni pasarelas de pago.
 
 ## Cómo abrirlo
 
@@ -79,4 +79,4 @@ Otros pasos: [sala](evidencias/reserva-sala-1365.png), [revisión](evidencias/re
 - La comprobación de contraste y teclado no constituye una auditoría WCAG completa ni un estudio con músicos o administradores reales.
 - La ilustración procede de `ArteMusical` del frontend actual, adaptada a HTML/CSS. Se mantienen DM Sans y Space Grotesk; sus archivos y licencias OFL están en `fuentes/`.
 
-La siguiente decisión es revisar navegación, lenguaje, color y recorrido. Tras aprobar el prototipo, se podrán trasladar los componentes de presentación a Next.js conservando los contratos y las reglas del servidor.
+El usuario aprobó la integración del diseño. El prototipo se conserva como referencia de revisión; la aplicación real utiliza identidad y permisos de Supabase, sin selector libre de roles.

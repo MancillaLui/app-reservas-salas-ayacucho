@@ -1,8 +1,8 @@
 # App Web de Reservas de Salas de Ensayo y Equipos - Ayacucho
 
-## Prototipo de interfaz en revisión
+## Prototipo e interfaz aprobada
 
-Ejecuta `npm run prototipo` y abre <http://127.0.0.1:4173>. El [prototipo independiente](prototipos/interfaz-ensaya/README.md) permite explorar músico y administrador con datos ficticios, sin credenciales ni conexión a Supabase. No sustituye la interfaz de la aplicación; se conserva en `codex/prototipo-interfaz` para revisión.
+Ejecuta `npm run prototipo` y abre <http://127.0.0.1:4173>. El [prototipo independiente](prototipos/interfaz-ensaya/README.md) permite explorar músico y administrador con datos ficticios. Su diseño aprobado se adaptó a la aplicación real: [navegación, pruebas y evidencias](docs/sprint-2/INTERFAZ-INTUITIVA.md). El selector de rol permanece exclusivamente en el prototipo.
 
 ## Organización del repositorio
 

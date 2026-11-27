@@ -31,3 +31,7 @@ Las flechas indican colaboración en ejecución, no importaciones concretas. Los
 El repositorio de asignación coordina sala y equipos atómicamente y consulta sus tarifas dentro de la misma transacción. Esa excepción al límite de tablas entre módulos se justifica en [arquitectura](../../sprint-2/ARQUITECTURA.md). Todas las modificaciones de recursos y asignaciones comparten el protocolo de bloqueo.
 
 [Anterior: contenedores](nivel_2_diagrama_de_contenedores.md). [Siguiente: código](nivel_4_diagrama_de_codigo.md). [Propuesta previa conservada](../../sprint-1-referencia/04-modelo-c4/nivel_3_diagrama_de_componentes.md).
+
+## Actualización de presentación
+
+La [interfaz intuitiva](../../sprint-2/INTERFAZ-INTUITIVA.md) incorpora pestañas compartidas, ayudas protegidas por rol, agenda diaria y navegación móvil. Conserva los mismos límites: presentación → cliente HTTP → API; no existen nuevas dependencias del dominio ni acceso directo del navegador a PostgreSQL.

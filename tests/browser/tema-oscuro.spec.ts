@@ -57,7 +57,7 @@ test('tema oscuro: modal, confirmación, vacío y error mantienen legibilidad',a
   await preparar(page,'ADMIN');await page.goto('/admin/catalogo');await cargado(page);
   await page.getByRole('button',{name:'Crear sala',exact:true}).click();const modal=page.getByRole('dialog');await expect(modal).toBeVisible();await contraste(modal.locator('label,input,textarea,button'));await captura(page,'modal-catalogo');
   await page.keyboard.press('Escape');await page.getByRole('button',{name:'Desactivar',exact:true}).click();await expect(page.getByRole('button',{name:'Confirmar desactivación'})).toBeVisible();await contraste(page.locator('.confirmacion-baja p,.confirmacion-baja .boton'));await captura(page,'confirmacion-admin');
-  await page.goto('/admin/reservas');await page.getByRole('combobox',{name:'Estado',exact:true}).selectOption('CANCELADA');await expect(page.getByRole('heading',{name:'No hay coincidencias'})).toBeVisible();await contraste(page.locator('.vacio h3,.vacio p'));await captura(page,'lista-vacia');
+  await page.goto('/admin/reservas');await page.getByRole('button',{name:'Listado',exact:true}).click();await page.getByRole('combobox',{name:'Estado',exact:true}).selectOption('CANCELADA');await expect(page.getByRole('heading',{name:'No hay coincidencias'})).toBeVisible();await contraste(page.locator('.vacio h3,.vacio p'));await captura(page,'lista-vacia');
   await page.route('**/api/v1/yo',r=>r.fulfill({status:503,json:{error:{message:'Servicio de identidad temporalmente no disponible'}}}));await page.reload();await expect(page.getByRole('button',{name:'Volver a comprobar sesión'})).toBeVisible();await contraste(page.locator('.aviso.error,.boton'));await captura(page,'error-sesion');
 });
 

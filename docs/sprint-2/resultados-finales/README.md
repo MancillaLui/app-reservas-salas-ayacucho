@@ -1,5 +1,7 @@
 # Sprint 2 de ENSAYA: resultados finales
 
+Actualización posterior: [interfaz intuitiva integrada y validación de 25 pruebas de navegador](../INTERFAZ-INTUITIVA.md). Las cifras y capturas anteriores conservan su fecha histórica.
+
 **Corte documental:** 27 de noviembre de 2026, America/Lima. Este conjunto resume resultados existentes; su redacción no ejecuta carga, migraciones ni operaciones en Supabase. Conserva los informes originales y distingue sus entornos y fechas.
 
 ## Resumen académico

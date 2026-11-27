@@ -1,0 +1,26 @@
+/* Interfaz aprobada: jerarquía compartida y tareas por rol. */
+:root{--accion:#91A7FF;--accion-hover:#B2C1FF}
+.boton{background:var(--accion);border-color:var(--accion);color:#0B1020}.boton:hover{background:var(--accion-hover)}
+.boton.secundario{background:transparent;color:var(--tinta);border:1px solid var(--borde)}
+.boton.texto{background:transparent;color:var(--azul)}
+.boton.peligro{background:#522839;color:var(--rojo);border:1px solid #98516A}
+.boton.lima{background:var(--accion);color:#0B1020}
+.pestanas{display:flex;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--borde);padding-bottom:18px;margin-bottom:22px}
+.pestanas button{min-height:44px;background:transparent;color:var(--gris);padding:9px 14px;border:1px solid transparent;border-radius:9px;font-weight:600}
+.pestanas button[aria-pressed=true]{background:#263455;border-color:#687AB5;color:var(--tinta)}
+.pestanas button span{margin-left:8px;background:var(--fondo);padding:2px 6px;border-radius:5px;font-size:.75rem}
+.ayuda-plataforma details{padding:20px 0;border-bottom:1px solid var(--borde)}
+.ayuda-plataforma summary{cursor:pointer;font-weight:600}.ayuda-plataforma p{color:var(--gris);margin:12px 0 0}
+.agenda-diaria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.agenda-sala{min-width:0;background:var(--campo);padding:18px;border:1px solid var(--borde);border-radius:12px}
+.agenda-sala h2{font-size:1.1rem}.agenda-evento{display:grid;gap:7px;padding:14px;margin-top:14px;background:#223354;border:1px solid #52639B;border-left:3px solid var(--azul);border-radius:8px}
+.agenda-evento:hover{background:#293C60;text-decoration:none}.agenda-evento .estado{justify-self:start}
+.aviso-pendiente{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--aviso-fondo);color:var(--aviso-texto);margin-bottom:24px}.aviso-pendiente p{margin:6px 0 0}
+.resumen-reserva summary{cursor:pointer;font-weight:700;color:var(--tinta);margin-bottom:20px}.contenido-resumen{min-width:0}
+.tabla-scroll{position:relative}.navegacion-inferior{display:none}
+@media(max-width:1000px){.agenda-diaria{grid-template-columns:1fr}}
+@media(max-width:800px){.navegacion-inferior{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0F1729;border-top:1px solid var(--borde);padding:8px 4px max(8px,env(safe-area-inset-bottom))}.navegacion-inferior a{display:grid;justify-items:center;text-align:center;padding:7px 3px;font-size:.7rem;color:var(--gris);border-radius:8px}.navegacion-inferior a span{font-size:1.2rem}.navegacion-inferior a[aria-current=page]{background:#283522;color:var(--lima)}.musico .pie-panel{padding-bottom:95px}.resumen-reserva{order:-1}.resumen-reserva summary{margin-bottom:0}.resumen-reserva[open] summary{margin-bottom:18px}.aviso-pendiente{flex-wrap:wrap}}
+@media(max-width:540px){.reservas-adaptables table{min-width:0;width:100%}.reservas-adaptables thead{display:none}.reservas-adaptables tbody{display:grid;gap:16px}.reservas-adaptables tr{display:grid;background:var(--campo);border:1px solid var(--borde);padding:14px;border-radius:12px}.reservas-adaptables td{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border:0;flex-wrap:wrap}.reservas-adaptables td:before{content:attr(data-etiqueta);color:var(--gris);font-size:.8rem}.reservas-adaptables td:first-child{display:block}.reservas-adaptables td:last-child{display:block}.reservas-adaptables td:last-child a{display:block;text-align:center;border:1px solid var(--borde);border-radius:8px;padding:10px}.pestanas{gap:4px}.pestanas button{font-size:.8rem;padding:8px}.pasos-reserva{gap:5px}.pasos-reserva li{font-size:.65rem}.aviso-pendiente .boton{width:100%}}
+.boton.lima{border-color:var(--accion)}.boton.lima:hover{background:var(--accion-hover)}
+
+.contenido-comprobante{padding-top:18px}.contenido-comprobante dl{display:grid;gap:8px}.contenido-comprobante dt{color:var(--gris);font-size:.85rem}.contenido-comprobante dd{margin:0 0 12px;overflow-wrap:anywhere}
