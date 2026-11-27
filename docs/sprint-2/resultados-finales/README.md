@@ -54,3 +54,8 @@ La regresión Jest local comenzó el 27/11/2026 a las 10:07:48 de Lima; la de na
 El [informe de reorganización](../evidencias/organizacion/resumen.json) registra la regresión final; los [extractos de Jest](../evidencias/documentacion-final/pruebas-jest.json) y [navegador](../evidencias/documentacion-final/pruebas-navegador.json) conservan los casos observados y hashes de sus archivos de origen, sin rutas absolutas, stacks, credenciales ni sesiones. Los [metadatos de CI](../evidencias/documentacion-final/ci-referencia.json) identifican la revisión y pasos aprobados.
 
 Los reportes iniciales con 86 pruebas, capturas anteriores y resultados de carga mantienen sus valores originales. Los números finales proceden de la revisión más reciente de cada tipo; no se presentan todas las mediciones como una sola corrida.
+
+## Presentación para la exposición
+
+[Descargar presentación del Sprint 2](../presentacion/ENSAYA-Sprint-2.pptx): 54 diapositivas con notas del expositor, arquitectura, tecnologías, funcionalidades, pruebas y resultados de calidad.
+
