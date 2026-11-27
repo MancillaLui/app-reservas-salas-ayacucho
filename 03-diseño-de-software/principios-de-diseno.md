@@ -1,119 +1,13 @@
-# Principios de diseño (SOLID)
+# Principios de diseño SOLID - Sprint 2
 
-## Objetivo
-
-Documentar cómo se aplican los principios SOLID en el backend de la App de Reservas de Salas de Ensayo en Ayacucho, organizado con Clean Architecture, para que cada módulo se programe de forma uniforme y las reglas de negocio (como el anti-overbooking) no dependan de la tecnología.
-
-## Contexto
-
-- **Estilo:** Monolito modular (Node.js / TypeScript / Supabase).
-- **Enfoque interno:** Clean Architecture (Presentación, Aplicación, Dominio, Infraestructura).
-- **Módulo de referencia:** Reservas, porque integra base de datos relacional y pasarela de pagos externos (Yape/Plin).
-
-## Diagrama: Principios SOLID aplicados en el módulo Reservas
-
-```mermaid
-classDiagram
-    direction LR
-
-    namespace PRESENTACION {
-        class ReservaController {
-            + crear(req, res)
-        }
-    }
-
-    namespace APLICACION {
-        class CrearReservaUseCase {
-            - reservaRepo: ReservaRepository
-            - pagoPort: PagoPort
-            - catalogoPort: CatalogoPort
-            - mensajeriaPort: MensajeriaPort
-            + ejecutar(cmd)
-        }
-    }
-
-    namespace DOMINIO {
-        class Reserva {
-            + calcularTotal(): number
-            + marcarConfirmada(op): void
-        }
-        class ReservaRepository {
-            <<interface>>
-            + guardar(reserva)
-            + verificarDisponibilidad()
-        }
-        class CatalogoPort {
-            <<interface>>
-            + verificarStock(equipos): Promise~boolean~
-        }
-        class MensajeriaPort {
-            <<interface>>
-            + enviarComprobanteAsync(reserva): Promise~void~
-        }
-        class PagoPort {
-            <<interface>>
-            + validarPago(monto, cel, cod)
-        }
-    }
-
-    namespace INFRAESTRUCTURA {
-        class CatalogoInternoAdapter {
-            + verificarStock(equipos): Promise~boolean~
-        }
-        class WhatsAppMensajeriaAdapter {
-            + enviarComprobanteAsync(reserva): Promise~void~
-        }
-        class SupabaseReservaRepository {
-            + guardar(reserva)
-            + verificarDisponibilidad()
-        }
-        class YapePagoAdapter {
-            + validarPago(monto, cel, cod)
-        }
-        class PlinPagoAdapter {
-            + validarPago(monto, cel, cod)
-        }
-    }
-
-    ReservaController --> CrearReservaUseCase
-    CrearReservaUseCase ..> Reserva : crea
-    CrearReservaUseCase --> ReservaRepository
-    CrearReservaUseCase --> PagoPort
-    CrearReservaUseCase --> CatalogoPort
-    CrearReservaUseCase --> MensajeriaPort
-
-    SupabaseReservaRepository ..|> ReservaRepository
-    YapePagoAdapter ..|> PagoPort
-    PlinPagoAdapter ..|> PagoPort
-    CatalogoInternoAdapter ..|> CatalogoPort : implementa
-    WhatsAppMensajeriaAdapter ..|> MensajeriaPort : implementa
-```
-
-## SOLID en el módulo Reservas
-
-| Principio | Dónde se aplica (capa) | Cómo se cumple en el Sistema de Reservas | Archivos |
-|---|---|---|---|
-| **S** · Responsabilidad única | Todas las capas | Cada clase tiene una sola tarea: el controlador recibe la petición HTTP, el caso de uso coordina la reserva, la entidad aplica la regla anti-overbooking y el repositorio guarda en PostgreSQL (Supabase) | `reserva.controller.ts`, `crear-reserva.use-case.ts`, `reserva.ts`, `supabase-reserva-repository.ts` |
-| **O** · Abierto/cerrado | Infraestructura | Para agregar una nueva pasarela (ej. Plin o Niubiz) se crea un nuevo adaptador; el caso de uso de crear reserva no se modifica | `yape-pago.adapter.ts`, `plin-pago.adapter.ts` |
-| **L** · Sustitución de Liskov | Infraestructura | Yape y Plin devuelven la misma estructura `{ aprobado, numOperacion }`; el caso de uso funciona exactamente igual con cualquiera de los dos | `yape-pago.adapter.ts`, `plin-pago.adapter.ts` |
-| **I** · Segregación de interfaces | Dominio | En lugar de una interfaz gigante, se usan puertos específicos y pequeños: `PagoPort` valida pagos, `CatalogoPort` verifica stock y `MensajeriaPort` envía comprobantes asíncronos; `ReservaRepository` encapsula la persistencia de reservas | `pago-port.ts`, `catalogo-port.ts`, `mensajeria-port.ts`, `reserva-repository.ts` |
-| **D** · Inversión de dependencias | Aplicación | El caso de uso recibe interfaces por el constructor y no conoce Supabase ni la API de Yape; las implementaciones se conectan en `reservas.module.ts` | `crear-reserva.use-case.ts`, `reservas.module.ts` |
-
-## Qué pasaría sin SOLID en el Sistema de Reservas
-
-| Situación real | Sin SOLID | Con SOLID |
-|---|---|---|
-| Se agrega Plin además de Yape | Hay que modificar y llenar de condicionales (`if/else`) el caso de uso | Solo se crea un nuevo adaptador `PlinPagoAdapter` |
-| Se cambia Supabase por otro BaaS | Se rompe y reescribe toda la lógica del módulo | Solo se reemplaza `SupabaseReservaRepository` |
-| Se quiere probar la lógica de reservas | Se necesita conexión a internet, Supabase y la API real | Se prueba en milisegundos con objetos falsos en memoria |
-| Cambia la regla del mínimo de horas | Hay que buscarla por controladores y rutas | Está aislada de forma segura en la entidad `Reserva` |
-| El proveedor de WhatsApp se cae | Si el envío está acoplado al flujo, el proceso falla después del cobro y puede perderse la confirmación de un pago ya realizado | Con SOLID y el manejo asíncrono tras `MensajeriaPort`, la reserva pagada se confirma y persiste; el error de envío se captura de forma aislada con `.catch(...)` |
-
-## Relación con Clean Architecture y los patrones
-
-| Principio | Lo cumple en el proyecto |
+| Principio | Aplicación verificable |
 |---|---|
-| Responsabilidad única | La estricta separación en capas de Clean Architecture |
-| Abierto/cerrado y Liskov | El patrón Adapter (para validación de pagos) |
-| Segregación de interfaces | Los puertos declarados en el dominio (`PagoPort`, `ReservaRepository`) |
-| Inversión de dependencias | El patrón Repository y la regla de dependencia: las capas externas dependen del dominio y no al revés |
+| S - Responsabilidad única | HTTP valida/traduce; servicios coordinan; reglas puras validan; repositorios ejecutan SQL; worker procesa tareas. |
+| O - Abierto/cerrado | Un proveedor de pagos alternativo puede implementar ProveedorPago sin cambiar el servicio de Reservas, siempre que respete el contrato. |
+| L - Sustitución | El proveedor simulado y sus sustitutos de prueba respetan aprobación, rechazo y resultado incierto. No basta con que coincidan nombres de propiedades. |
+| I - Segregación | Contratos separados de identidad, catálogo, reserva, pago, administración y mensajería. |
+| D - Inversión de dependencias | Aplicación recibe interfaces; src/composicion.ts conecta repositorios y adaptadores concretos. |
+
+Las pruebas unitarias sustituyen repositorios y proveedores. Una prueba de arquitectura impide importar infraestructura, presentación o SDK técnicos desde dominio y aplicación. Las pruebas PostgreSQL verifican las garantías que un mock no puede acreditar.
+
+La entidad por sí sola no puede observar solicitudes concurrentes; la exclusión de sala y asignación de equipos se verifican dentro de la transacción. [Pruebas y trazabilidad](../docs/sprint-2/TRAZABILIDAD.md). [Propuesta previa conservada](../docs/sprint-1-referencia/03-diseño-de-software/principios-de-diseno.md).

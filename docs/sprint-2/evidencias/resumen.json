@@ -1,0 +1,105 @@
+{
+  "fecha": "2026-11-26T23:47:12.274Z",
+  "node": "v24.22.1",
+  "buildId": "zsNm5r7X2jS-xDzVpLPAv",
+  "jest": {
+    "pruebas": 86,
+    "aprobadas": 86,
+    "suites": 7,
+    "exito": true
+  },
+  "cobertura": {
+    "lines": {
+      "total": 363,
+      "covered": 361,
+      "skipped": 0,
+      "pct": 99.44
+    },
+    "statements": {
+      "total": 469,
+      "covered": 461,
+      "skipped": 0,
+      "pct": 98.29
+    },
+    "functions": {
+      "total": 109,
+      "covered": 107,
+      "skipped": 0,
+      "pct": 98.16
+    },
+    "branches": {
+      "total": 224,
+      "covered": 207,
+      "skipped": 0,
+      "pct": 92.41
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 100
+    }
+  },
+  "alcanceCobertura": "Backend, contratos HTTP y OpenAPI; excluye componentes React",
+  "openapi": {
+    "valido": true,
+    "version": "3.0.3",
+    "operaciones": 26,
+    "fecha": "2026-11-26T23:44:46.635Z"
+  },
+  "navegador": {
+    "startTime": "2026-11-26T23:45:10.736Z",
+    "duration": 5593.251,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "benchmark": {
+    "fecha": "2026-11-26T23:44:43.151Z",
+    "herramienta": "Node fetch (no k6)",
+    "endpoint": "/api/v1/disponibilidad",
+    "base": "PostgreSQL temporal, 2 salas y 3 equipos, sin reservas",
+    "usuariosConcurrentes": 20,
+    "solicitudes": 200,
+    "fallos": 0,
+    "p95_ms": 261.7481000000007,
+    "max_ms": 369.3729000000003,
+    "promedio_ms": 97.68679100000008
+  },
+  "k6": {
+    "maxVUs": 2000,
+    "solicitudes": 92701,
+    "tasaErrores": 0.829678212748514,
+    "p95_ms": 1510.9204,
+    "p95Disponibilidad_ms": 1414.6966799999996,
+    "umbrales": {
+      "http_req_duration": {
+        "p(95)<3000": {
+          "ok": true
+        }
+      },
+      "http_req_duration{name:disponibilidad}": {
+        "p(95)<3000": {
+          "ok": true
+        }
+      },
+      "checks": {
+        "rate>0.99": {
+          "ok": false
+        }
+      },
+      "http_req_failed": {
+        "rate<0.01": {
+          "ok": false
+        }
+      }
+    }
+  },
+  "limites": [
+    "PostgreSQL temporal con 2 salas, 3 equipos y sin reservas en carga pública.",
+    "Los controles HTTP autenticados usan identidad controlada en pruebas; Supabase Auth real no se configuró.",
+    "Pagos y mensajería simulados.",
+    "No mide carga completa en 3G/4G, disponibilidad mensual ni conversión de usuarios."
+  ]
+}

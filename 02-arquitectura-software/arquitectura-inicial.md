@@ -1,60 +1,23 @@
-# Arquitectura inicial del sistema
+# Arquitectura del sistema - Sprint 2
 
-## Diagrama de arquitectura
+La propuesta inicial se concretó en una aplicación Next.js con API REST y un worker del mismo código. Supabase aporta identidad y PostgreSQL. Pagos y mensajería son simulados.
 
 ```mermaid
-flowchart TD;
+flowchart TB
+    Cliente[Cliente músico] --> Web[Web responsiva Next.js]
+    Admin[Administrador] --> Web
+    Web -->|REST con Bearer| API[API Node.js - monolito modular]
+    Web -->|Inicio de sesión| Auth[Supabase Auth]
+    API --> Usuarios[Usuarios]
+    API --> Catalogo[Catálogo]
+    API --> Reservas[Reservas]
+    Reservas -->|Contrato interno| Pagos[Pagos simulados]
+    Usuarios --> DB[(PostgreSQL en Supabase)]
+    Catalogo --> DB
+    Reservas -->|Asignación y outbox transaccionales| DB
+    Worker[Worker de expiración y envío simulado] --> DB
+```
 
-subgraph ACTORES ["ACTORES"];
-Cliente["Cliente"];
-Admin["Administrador"];
-end;
+Las flechas representan colaboración en ejecución. No son dependencias de importación. El worker corre en una segunda terminal y no constituye un nuevo módulo de negocio.
 
-subgraph PRESENTACION ["PRESENTACIÓN"];
-Web["Aplicación Web -> API REST"];
-end;
-
-subgraph NEGOCIO ["LÓGICA DE NEGOCIO"];
-Usuarios["Usuarios"];
-Catalogo["Catálogo (Salas y Equipos)"];
-Reservas["Reservas (Motor Core y Carrito)"];
-Pagos["Pagos"];
-end;
-
-subgraph DATOS ["DATOS"];
-BD["Base de datos (Supabase)"];
-end;
-
-subgraph EXTERNOS ["SISTEMAS EXTERNOS"];
-Pasarela["Pasarela de pago"];
-Auth["Proveedor Auth"];
-Mensajeria["Mensajería (WhatsApp/Correo)"];
-end;
-
-ACTORES --> PRESENTACION;
-PRESENTACION -->|"Delega"| NEGOCIO;
-NEGOCIO -->|"Persiste estado"| DATOS;
-NEGOCIO -->|"Llama API externa"| EXTERNOS;
-
-Cliente ~~~ Admin;
-Usuarios ~~~ Catalogo;
-Catalogo ~~~ Reservas;
-Reservas ~~~ Pagos;
-Pasarela ~~~ Auth;
-
-style ACTORES fill:#222, stroke:#fff, stroke-width: 2px,color:#fff;
-style PRESENTACION fill:#222, stroke:#fff, stroke-width: 2px,color:#fff;
-style NEGOCIO fill:#222, stroke: #fff, stroke-width: 2px,color:#fff;
-style DATOS fill:#222, stroke:#fff,stroke-width: 2px,color:#fff;
-style EXTERNOS fill:#222, stroke:#fff, stroke-width: 2px,color:#fff;
-style Cliente fill:#222, stroke: #fff,color:#fff;
-style Admin fill:#222, stroke:#fff,color:#fff;
-style Web fill:#222, stroke:#fff,color:#fff;
-style Usuarios fill:#222, stroke: #fff,color:#fff;
-style Catalogo fill:#222, stroke: #fff,color:#fff;
-style Reservas fill:#222, stroke: #fff,color:#fff;
-style Pagos fill:#222, stroke: #fff,color:#fff;
-style BD fill:#222, stroke:#fff,color:#fff;
-style Pasarela fill:#222, stroke:#fff,color:#fff;
-style Auth fill:#222, stroke:#fff,color:#fff;
-style Mensajeria fill:#222, stroke:#fff,color:#fff;
+La descripción anterior al Sprint 2 se conserva en [la referencia histórica](../docs/sprint-1-referencia/02-arquitectura-software/arquitectura-inicial.md). Consultar [la arquitectura implementada](../docs/sprint-2/ARQUITECTURA.md) para transacciones, caché y límites.

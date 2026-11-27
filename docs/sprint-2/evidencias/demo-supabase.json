@@ -1,0 +1,60 @@
+{
+  "fecha": "2026-11-27T02:25:22.659Z",
+  "completada": true,
+  "entorno": "Supabase real",
+  "ejecucion": "Servicios de aplicación invocados desde script administrativo; no prueba de navegador ni de sesión JWT",
+  "pagos": "Simulados; sin cobros reales",
+  "mensajeria": "Simulada; sin envío de correo o WhatsApp",
+  "pasos": [
+    {
+      "paso": "Rol administrador asignado",
+      "cuentaUnica": true,
+      "correoConfirmado": true
+    },
+    {
+      "paso": "Reserva pendiente creada",
+      "reservaId": "f33c00d5-7140-48cd-863e-8c278e845bc6",
+      "estado": "PENDIENTE",
+      "totalCentimos": 7000,
+      "inicio": "2026-11-27T23:00:00.000Z",
+      "fin": "2026-11-28T01:00:00.000Z"
+    },
+    {
+      "paso": "Pago y comprobante simulados",
+      "reservaId": "f33c00d5-7140-48cd-863e-8c278e845bc6",
+      "estado": "CONFIRMADA",
+      "comprobanteEstado": "ENVIADA"
+    },
+    {
+      "paso": "Fallo de mensajería aislado",
+      "reservaId": "495e07cb-43e7-4f12-9730-149a5a98c6ab",
+      "reservaEstado": "CONFIRMADA",
+      "envioEstado": "FALLIDA"
+    },
+    {
+      "paso": "Cancelación y liberación comprobadas",
+      "reservaId": "495e07cb-43e7-4f12-9730-149a5a98c6ab",
+      "estado": "CANCELADA",
+      "reembolso": "Solo registro simulado pendiente; no existe cobro bancario"
+    },
+    {
+      "paso": "Bloqueo y desbloqueo comprobados",
+      "bloqueoId": "7f76bc1e-7f9b-4c93-b8d1-00ac875ac9e9",
+      "estadoFinal": "CANCELADA"
+    },
+    {
+      "paso": "CRUD de catálogo comprobado",
+      "recursoId": "12ae8525-7534-4e6a-ab9b-3de3f71128d0",
+      "creado": true,
+      "actualizado": true,
+      "desactivado": true
+    }
+  ],
+  "reservaConfirmada": "f33c00d5-7140-48cd-863e-8c278e845bc6",
+  "pendientes": [
+    "Crear o utilizar una segunda cuenta cliente para demostrar ambos roles desde la interfaz.",
+    "Revisar visualmente el panel administrador y completar un recorrido con sesión de navegador.",
+    "Publicar el código y evidencias en el repositorio de entrega y ejecutar GitHub Actions.",
+    "La carga de 2.000 VUs sigue sin cumplir el umbral de errores."
+  ]
+}

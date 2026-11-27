@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-11-27T02:27:43.746Z",
+  "entorno": "PostgreSQL temporal aislado; no se vació Supabase real",
+  "pruebas": 86,
+  "aprobadas": 86,
+  "suites": 7,
+  "cobertura": {
+    "lines": {
+      "total": 366,
+      "covered": 364,
+      "skipped": 0,
+      "pct": 99.45
+    },
+    "statements": {
+      "total": 472,
+      "covered": 464,
+      "skipped": 0,
+      "pct": 98.3
+    },
+    "functions": {
+      "total": 109,
+      "covered": 107,
+      "skipped": 0,
+      "pct": 98.16
+    },
+    "branches": {
+      "total": 226,
+      "covered": 207,
+      "skipped": 0,
+      "pct": 91.59
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 100
+    }
+  },
+  "alcance": "Backend y contratos HTTP/OpenAPI; componentes React excluidos",
+  "typecheck": "Aprobado en esta ejecución"
+}

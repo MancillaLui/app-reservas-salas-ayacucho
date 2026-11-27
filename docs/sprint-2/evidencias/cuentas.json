@@ -1,0 +1,17 @@
+{
+  "fecha": "2026-11-27T03:11:51.987Z",
+  "metodo": "Consulta SQL de solo lectura; sin correos, IDs ni credenciales",
+  "cuentas": [
+    {
+      "rol": "ADMIN",
+      "confirmado": true,
+      "cantidad": 1
+    },
+    {
+      "rol": "CLIENTE",
+      "confirmado": true,
+      "cantidad": 1
+    }
+  ],
+  "recorridoNavegadorValidado": false
+}

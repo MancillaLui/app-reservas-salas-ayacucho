@@ -1,0 +1,3 @@
+export function ArteMusical({compacto=false,nombre='Tu próximo ensayo'}:{compacto?:boolean;nombre?:string}){
+  return <div className={`arte-musical ${compacto?'compacto':''}`} aria-label={`Ilustración musical: ${nombre}`} role="img"><div className="arte-trama"/><span className="arte-orbita"/><div className="arte-ampli"><span className="ampli-marca">ENSAYA</span><i/><i/><div className="ampli-controles">● ● ● ● ●</div></div><div className="arte-nota" aria-hidden="true">♬</div><div className="arte-sello">SUBE EL<br/><strong>VOLUMEN</strong></div><div className="arte-ondas" aria-hidden="true">{[28,48,74,42,96,64,110,40,70].map((h,i)=><i key={i} style={{height:h}}/>)}</div><span className="arte-texto">HECHO PARA SONAR.</span></div>;
+}

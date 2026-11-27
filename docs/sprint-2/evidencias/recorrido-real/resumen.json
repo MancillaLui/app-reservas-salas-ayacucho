@@ -1,0 +1,31 @@
+{
+  "fecha": "2026-11-27T03:17:33.237Z",
+  "base": "http://localhost:3000",
+  "metodo": "Chrome con inicio de sesión manual y API/Supabase reales; sin interceptaciones",
+  "resultados": [
+    {
+      "rol": "ADMIN",
+      "identidadAPI": true,
+      "navegacion": true,
+      "redireccionOtroRol": "No aplica"
+    },
+    {
+      "rol": "CLIENTE",
+      "identidadAPI": true,
+      "navegacion": true,
+      "redireccionOtroRol": true
+    }
+  ],
+  "reservaYPagoEnNavegadorValidados": true,
+  "reserva": {
+    "id": "5e0e29df-1297-45d1-a956-057c9431fd12",
+    "inicio": "2026-12-05T00:00:00.000Z",
+    "fin": "2026-12-05T01:00:00.000Z",
+    "totalCentimos": 4000,
+    "pago": "SIMULADO_APROBADO",
+    "confirmada": true,
+    "canceladaAlTerminar": true,
+    "reembolso": "Registro pendiente; sin movimiento bancario"
+  },
+  "limitacion": "Pagos y mensajes simulados. La reserva de prueba se cancela para liberar recursos."
+}

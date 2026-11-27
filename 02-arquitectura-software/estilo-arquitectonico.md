@@ -1,43 +1,25 @@
-# Estilo Arquitectónico
+# Estilo arquitectónico - Monolito modular
 
-## Monolito Modular Serverless
+El backend conserva cuatro módulos: Usuarios, Catálogo, Reservas y Pagos. Se ejecuta como una aplicación Node.js/Next.js, con un worker periódico del mismo código. Supabase gestiona PostgreSQL y autenticación; su uso no convierte la API Node.js en serverless.
 
-Para el desarrollo inicial de la aplicación web de reservas en Ayacucho, se ha seleccionado el estilo arquitectónico de **Monolito Modular** soportado por una infraestructura Serverless (Backend-as-a-Service).
-
-**Justificación:**
-Al ser un proyecto desarrollado por un "Solo Developer", implementar arquitecturas distribuidas complejas (como Microservicios) generaría una sobrecarga innecesaria de configuración y mantenimiento. El Monolito Modular permite tener una única unidad de despliegue (fácil de subir a producción) pero manteniendo el código internamente ordenado por módulos de negocio, lo que facilita su evolución futura.
+La elección responde al desarrollo individual y bajo costo operativo (RC01, DA02 y ADR-001). Se mantienen llamadas internas entre módulos y puertos para aislar proveedores; no hay peticiones HTTP entre microservicios propios.
 
 ```mermaid
-flowchart TD
-    Cliente["📱 Cliente Web Mobile (React/Next.js)"]
-    
-    subgraph Monolito ["⚙️ Monolito Backend (BaaS - Supabase / Node)"]
-        direction TB
-        subgraph API ["Capa de Presentación / API"]
-            Rutas["Rutas HTTP / Funciones Edge"]
-        end
-        
-        subgraph Modulos ["Capa de Lógica de Negocio (Módulos)"]
-            direction LR
-            MUsuarios["Módulo Usuarios"]
-            MCatalogo["Módulo Catálogo"]
-            MReservas["Módulo Reservas"]
-            MPagos["Módulo Pagos"]
-        end
-        
-        subgraph CapaInfra ["Capa de Infraestructura"]
-            ORM["Repositorios y Adaptadores"]
-        end
-        
-        API --> Modulos
-        Modulos --> CapaInfra
+flowchart LR
+    Web[React / Next.js] -->|REST| API[API Next.js]
+    subgraph Monolito[Backend modular]
+      API --> U[Usuarios]
+      API --> C[Catálogo]
+      API --> R[Reservas]
+      R -->|PagoPort| P[Pagos]
     end
-    
-    BD[("🗄️ Base de Datos PostgreSQL")]
-    ExternoPagos["💳 Pasarela de Pago Externa"]
-    ExternoMsg["💬 Servicio de Mensajería"]
-    
-    Cliente -- HTTP / REST --> API
-    CapaInfra -- SQL/tsrange --> BD
-    CapaInfra -. HTTPS .-> ExternoPagos
-    CapaInfra -. HTTPS .-> ExternoMsg
+    U --> Auth[Supabase Auth]
+    U --> DB[(PostgreSQL)]
+    C --> DB
+    R --> DB
+    W[Worker del mismo repositorio] --> DB
+```
+
+La unidad de despliegue es el repositorio de aplicación. En la demostración local hay dos procesos: servidor y worker. El alojamiento público queda fuera del alcance acordado. Las simulaciones de pago y envío están identificadas en la interfaz y API.
+
+Detalle: [arquitectura y datos](../docs/sprint-2/ARQUITECTURA.md). [Propuesta previa conservada](../docs/sprint-1-referencia/02-arquitectura-software/estilo-arquitectonico.md).
