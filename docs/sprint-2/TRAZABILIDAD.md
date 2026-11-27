@@ -1,5 +1,7 @@
 # Matriz de trazabilidad del Sprint 2
 
+Consultar [equivalencias y validación de la reorganización](ORGANIZACION.md). Los identificadores RF/HU y contratos REST se conservan; los módulos están en `src/servidor/modulos` y la interfaz en `src/cliente`.
+
 Los nombres de pruebas corresponden a los archivos de `tests/unit` y `tests/integration/postgres.test.ts`. La evidencia de ejecución y sus límites se documentan en [VALIDACION.md](VALIDACION.md).
 
 | RF / HU | Implementación | Validación automatizada / evidencia |

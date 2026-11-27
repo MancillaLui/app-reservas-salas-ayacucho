@@ -1,5 +1,7 @@
 # Ejecutar el Sprint 2
 
+La [reorganización](ORGANIZACION.md) conserva los comandos de esta guía. Ejecútalos desde la raíz. Las nuevas evidencias se guardan en carpetas fechadas de `docs/sprint-2/evidencias/ejecuciones`; las existentes se conservan. `npm run repo:validate` verifica estructura, enlaces e invariantes.
+
 La aplicación usa Node.js 22 o superior, Next.js, PostgreSQL de Supabase y Supabase Auth. Pagos y mensajería son simulados y no requieren cuentas financieras. No hay contraseñas de demostración ni una vía de acceso que omita la autenticación.
 
 ## Configuración de Supabase

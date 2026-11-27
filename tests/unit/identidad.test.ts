@@ -1,5 +1,5 @@
-import { SupabaseIdentidad } from '../../src/modulos/usuarios/infraestructura/supabase-identidad';
-import type { Database } from '../../src/shared/database';
+import { SupabaseIdentidad } from '../../src/servidor/modulos/usuarios/infraestructura/supabase-identidad';
+import type { Database } from '../../src/servidor/infraestructura/persistencia/database';
 const mockGetUser=jest.fn();
 jest.mock('@supabase/supabase-js',()=>({createClient:()=>({auth:{getUser:mockGetUser}})}));
 beforeEach(()=>{process.env.NEXT_PUBLIC_SUPABASE_URL='https://ejemplo.supabase.co';process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY='public-key';mockGetUser.mockReset();});

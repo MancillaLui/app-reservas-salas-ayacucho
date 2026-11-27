@@ -105,3 +105,15 @@ La compilación de producción y TypeScript pasaron. Se repitieron las 86 prueba
 Las muestras de texto y componentes exigieron contraste mínimo 4,5:1; las 414 muestras de paneles tuvieron mínimo observado de 6,35:1. La medición usa estilos computados y composición de fondos; no acredita una auditoría WCAG completa ni todas las combinaciones de contenido. Se corrigió una transición de fondo que producía contraste insuficiente al habilitar el botón de pago y se adaptaron los campos de fecha/hora para evitar truncamiento en tableta.
 
 [Informe reproducible y procedencia](evidencias/tema-oscuro/resumen.json), [documentación y capturas](TEMA-OSCURO.md). Las capturas nuevas usan fixtures de sesión/API; no se hicieron escrituras en Supabase. Las evidencias auténticas del recorrido anterior se conservaron intactas. No se repitió la carga extrema ni se modifican sus límites; pagos y mensajes continúan simulados.
+
+## Actualización: reorganización del repositorio
+
+El 27 de noviembre de 2026 (America/Lima) se reorganizó el código en cliente, servidor y compartido; la documentación arquitectónica pasó a `docs/arquitectura` y los scripts se agruparon por responsabilidad. Se conservaron las rutas de Next.js, contratos REST, migraciones, estilo visual y reglas. La caché se conecta a Catálogo mediante `CachePort` e inyección desde composición para mantener aplicación independiente de infraestructura.
+
+Pasaron 89 pruebas Jest (86 anteriores y tres adicionales de arquitectura), 21 pruebas de navegador contra producción local, TypeScript, OpenAPI con 26 operaciones y compilación. El verificador de estructura comprueba 63 hashes y enlaces de documentación vigente; incluye las migraciones, CSS, OpenAPI, archivo histórico y todas las evidencias anteriores. No se ejecutaron demos ni operaciones de escritura sobre Supabase.
+
+La cobertura de líneas permanece en 99,45 %, con alcance equivalente: 362/364 líneas en lugar de 364/366. La diferencia corresponde a la importación e inicialización de caché retirada del servicio. Sentencias: 463/471 (98,30 %); funciones: 107/109 (98,16 %); ramas: 207/226 (91,59 %). No se excluyeron archivos para sostener el porcentaje.
+
+[Organización, equivalencias y reproducción](ORGANIZACION.md), [resultados observados](evidencias/organizacion/resumen.json) y [línea base de hashes](evidencias/organizacion/invariantes.json). Los informes anteriores conservan sus rutas y hashes como procedencia histórica. Las nuevas ejecuciones de generadores se guardan en carpetas fechadas y no sustituyen este informe.
+
+La revisión se publica como propuesta desde `codex/organizacion-proyecto` hacia `codex/sprint-2-entrega`; la integración requiere observar CI. No se repitió carga ni cambian las limitaciones de pagos, mensajería, capacidad o disponibilidad.

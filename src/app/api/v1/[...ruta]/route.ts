@@ -1,9 +1,9 @@
 import { NextRequest,NextResponse } from 'next/server';
 import { ZodError,z } from 'zod';
-import { servicios } from '../../../../composicion';
-import { AppError,exigir } from '../../../../shared/errores';
-import { intervalo,reservaSchema,recursoSchema,pagoSchema,motivoSchema,bloqueoSchema,uuid } from '../../../../modulos/reservas/presentacion/schemas';
-import { openapi } from '../../../../openapi';
+import { servicios } from '../../../../servidor/composicion';
+import { AppError,exigir } from '../../../../compartido/dominio/errores';
+import { intervalo,reservaSchema,recursoSchema,pagoSchema,motivoSchema,bloqueoSchema,uuid } from '../../../../servidor/modulos/reservas/presentacion/schemas';
+import { openapi } from '../../../../servidor/documentacion/openapi';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 async function body(req:NextRequest) {

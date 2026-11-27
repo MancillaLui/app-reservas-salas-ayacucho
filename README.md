@@ -1,5 +1,9 @@
 # App Web de Reservas de Salas de Ensayo y Equipos - Ayacucho
 
+## Organización del repositorio
+
+La propuesta de reorganización está en `codex/organizacion-proyecto`. Consultar [estructura y equivalencias](docs/sprint-2/ORGANIZACION.md): rutas en `src/app`, frontend en `src/cliente`, backend en `src/servidor`, contratos puros en `src/compartido` y arquitectura en `docs/arquitectura`. Los comandos npm existentes se mantienen.
+
 ## Sprint 2: aplicación ejecutable
 
 Entrega publicada en la rama `codex/sprint-2-entrega`. [Validación remota aprobada del commit funcional](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473).

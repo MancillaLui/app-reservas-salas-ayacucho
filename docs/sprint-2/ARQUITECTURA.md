@@ -2,11 +2,13 @@
 
 ## Monolito modular y Clean Architecture
 
-La presentación evolucionó a páginas de Next.js separadas por rol y componentes en `src/presentacion`. La sesión y el cliente HTTP son compartidos; las guardas de interfaz consultan la identidad validada por la API. Ver [organización de las interfaces](INTERFACES.md). Este cambio no altera contratos REST, tablas ni reglas de negocio.
+La [organización del repositorio](ORGANIZACION.md) separa navegador, servidor y contratos compartidos. La caché se inyecta a Catálogo mediante `CachePort`; su implementación y TTL no cambiaron. PostgreSQL, la coordinación SQL y las tareas periódicas están en infraestructura del servidor.
+
+La presentación evolucionó a páginas de Next.js separadas por rol y componentes en `src/cliente/presentacion`. La sesión y el cliente HTTP son compartidos; las guardas de interfaz consultan la identidad validada por la API. Ver [organización de las interfaces](INTERFACES.md). Este cambio no altera contratos REST, tablas ni reglas de negocio.
 
 Next.js ejecuta la interfaz y una API Node.js en una unidad de despliegue local. Supabase aporta PostgreSQL y Auth como servicios gestionados. No se declara una ejecución serverless: se necesita un proceso Node.js y un worker separado del mismo código para tareas periódicas.
 
-Los cuatro módulos de negocio son Usuarios, Catálogo, Reservas y Pagos. En `src/modulos`, cada uno separa contratos o reglas de dominio, servicios de aplicación y adaptadores de infraestructura. El límite HTTP y sus validaciones están en presentación. `src/composicion.ts` crea las implementaciones e inyecta los contratos. Las llamadas a Pagos son internas, mediante su API pública; no hay microservicios.
+Los cuatro módulos de negocio son Usuarios, Catálogo, Reservas y Pagos. En `src/servidor/modulos`, cada uno separa contratos o reglas de dominio, servicios de aplicación y adaptadores de infraestructura. El límite HTTP y sus validaciones están en presentación. `src/servidor/composicion.ts` crea las implementaciones e inyecta los contratos. Las llamadas a Pagos son internas, mediante su API pública; no hay microservicios.
 
 El dominio no importa Next.js, PostgreSQL ni Supabase. Los controladores invocan servicios de aplicación y no ejecutan SQL. Las reglas puras validan intervalos, cantidades, importes, propiedad y cancelación. Repository y Adapter aíslan persistencia, identidad, pagos y mensajería; los servicios reciben dependencias por constructor. Las pruebas estáticas inspeccionan importaciones del dominio y aplicación.
 

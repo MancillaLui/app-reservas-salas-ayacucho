@@ -1,4 +1,4 @@
-import { reservaSchema,recursoSchema,pagoSchema } from '../../src/modulos/reservas/presentacion/schemas';
+import { reservaSchema,recursoSchema,pagoSchema } from '../../src/servidor/modulos/reservas/presentacion/schemas';
 test('la entrada no acepta precios ni clienteId del navegador',()=>{expect(reservaSchema.safeParse({salaId:'10000000-0000-4000-8000-000000000001',inicio:'2090-01-01T18:00:00-05:00',fin:'2090-01-01T20:00:00-05:00',clienteId:'otro',precio:1}).success).toBe(false);});
 test('rechaza equipos con cantidades fraccionarias',()=>{expect(reservaSchema.safeParse({salaId:'10000000-0000-4000-8000-000000000001',inicio:'2090-01-01T18:00:00-05:00',fin:'2090-01-01T20:00:00-05:00',equipos:[{equipoId:'20000000-0000-4000-8000-000000000001',cantidad:0.5}]}).success).toBe(false);});
 test('rechaza precios no enteros en catálogo',()=>{expect(recursoSchema.safeParse({nombre:'Sala',categoria:'Sala',precio_centimos:30.5}).success).toBe(false);});

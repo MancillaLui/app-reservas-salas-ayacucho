@@ -1,2 +1,2 @@
-import {PagosAdmin} from '../../../presentacion/admin/operaciones';
+import {PagosAdmin} from '../../../cliente/presentacion/admin/operaciones';
 export default function Page(){return <PagosAdmin/>;}

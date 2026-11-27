@@ -4,12 +4,12 @@ Este índice relaciona la entrega con el PDF `ENTREGABLE-SPRINT-2.pdf` proporcio
 
 | Punto de la consigna | Dónde revisarlo | Estado |
 |---|---|---|
-| Estilo y enfoque implementados | `src/modulos`, `src/composicion.ts`, [arquitectura](ARQUITECTURA.md) y C4 | Implementado |
+| Estilo y enfoque implementados | `src/servidor/modulos`, `src/servidor/composicion.ts`, [arquitectura](ARQUITECTURA.md) y C4 | Implementado |
 | SDD, aceptación y tareas | [SDD](SDD.md), [trazabilidad](TRAZABILIDAD.md) | Documentado |
-| Endpoints REST / OpenAPI | `/docs`, `/api/v1/openapi`, `src/openapi.ts` | 26 operaciones validadas |
+| Endpoints REST / OpenAPI | `/docs`, `/api/v1/openapi`, `src/servidor/documentacion/openapi.ts` | 26 operaciones validadas |
 | Base de datos y caché | [Arquitectura](ARQUITECTURA.md), [validación](VALIDACION.md) | Transacciones, restricciones, índices y caché de catálogo |
-| SOLID y patrones | `03-diseño-de-software`, código de módulos | Documentado e implementado |
-| Jest y cobertura | `tests`, `coverage/complete`, evidencia de regresión | 86 aprobadas; 99,45 % líneas backend/contratos |
+| SOLID y patrones | `docs/arquitectura/03-diseño-de-software`, código de módulos | Documentado e implementado |
+| Jest y cobertura | `tests`, `coverage/complete`, evidencia de regresión | 89 aprobadas (86 previas y tres de arquitectura); 99,45 % líneas backend/contratos |
 | Escenarios de calidad | [Resultados](VALIDACION.md), `tests/load` y `evidencias` | Resultados medidos; incluye la meta no alcanzada de 2.000 VUs |
 | Primera versión funcional | [Inicio](INICIO.md), [interfaces](INTERFACES.md) | Ejecutable local con Supabase |
 | Cuentas reales | [Comprobación de solo lectura](evidencias/cuentas.json) | Un ADMIN y un CLIENTE confirmados; no acredita recorrido UI |

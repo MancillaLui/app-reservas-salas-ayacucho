@@ -1,10 +1,11 @@
-import { ReservasService } from '../../src/modulos/reservas';
-import { PagoSimulado,PagosService } from '../../src/modulos/pagos';
-import { UsuariosService } from '../../src/modulos/usuarios';
-import { CatalogoService } from '../../src/modulos/catalogo';
-import type { ReservaRepository,MensajeriaPort } from '../../src/modulos/reservas';
-import type { CatalogoRepository } from '../../src/modulos/catalogo';
-import type { Actor,Reserva } from '../../src/shared/tipos';
+import { Cache } from '../../src/servidor/infraestructura/cache/cache';
+import { ReservasService } from '../../src/servidor/modulos/reservas';
+import { PagoSimulado,PagosService } from '../../src/servidor/modulos/pagos';
+import { UsuariosService } from '../../src/servidor/modulos/usuarios';
+import { CatalogoService } from '../../src/servidor/modulos/catalogo';
+import type { ReservaRepository,MensajeriaPort } from '../../src/servidor/modulos/reservas';
+import type { CatalogoRepository } from '../../src/servidor/modulos/catalogo';
+import type { Actor,Reserva } from '../../src/compartido/contratos/tipos';
 const actor:Actor={id:'cliente',role:'CLIENTE'};
 const reserva:Reserva={id:'r',cliente_id:'cliente',sala_id:'s',inicio:'2090-01-01T18:00:00-05:00',fin:'2090-01-01T20:00:00-05:00',tipo:'RESERVA',estado:'PENDIENTE',total_centimos:6000,vence_en:'2090-01-01T17:00:00-05:00',motivo:null,creada_en:''};
 let repo:jest.Mocked<ReservaRepository>,mensajes:jest.Mocked<MensajeriaPort>,service:ReservasService;
@@ -18,5 +19,5 @@ test('repetir un pago terminado no vuelve a cobrar',async()=>{repo.iniciarPago.m
 test('fallo al configurar envío no revierte confirmación persistida',async()=>{const log=jest.spyOn(console,'error').mockImplementation(()=>{});mensajes.programar.mockRejectedValue(new Error('sin conexión'));expect((await service.pagar(actor,'r','clave-123','aprobado','fallo')).estado).toBe('CONFIRMADA');log.mockRestore();});
 test('usuarios rechaza solicitudes sin Bearer',()=>{const identidad={autenticar:jest.fn()};const usuarios=new UsuariosService(identidad);expect(()=>usuarios.autenticar(null)).toThrow();expect(()=>usuarios.autenticar('Basic token')).toThrow();expect(identidad.autenticar).not.toHaveBeenCalled();});
 test('usuarios delega verificación del token al proveedor',async()=>{const identidad={autenticar:jest.fn().mockResolvedValue(actor)};expect(await new UsuariosService(identidad).autenticar('Bearer firmado')).toBe(actor);expect(identidad.autenticar).toHaveBeenCalledWith('firmado');});
-test('catálogo filtra categorías y oculta inactivos',async()=>{const r={listar:jest.fn().mockResolvedValue([{id:'1',categoria:'Voces',activo:true},{id:'2',categoria:'Voces',activo:false},{id:'3',categoria:'Otra',activo:true}])} as unknown as CatalogoRepository;const c=new CatalogoService(r);expect(await c.listar('equipos','Voces')).toHaveLength(1);expect(await c.listar('equipos',undefined,true)).toHaveLength(3);});
-test('catálogo niega mutaciones al cliente',async()=>{const r={guardar:jest.fn()} as unknown as CatalogoRepository;await expect(new CatalogoService(r).guardar(actor,'salas',{nombre:'A',categoria:'Sala',precio_centimos:3000,stock:1,activo:true,descripcion:''})).rejects.toMatchObject({status:403});expect(r.guardar).not.toHaveBeenCalled();});
+test('catálogo filtra categorías y oculta inactivos',async()=>{const r={listar:jest.fn().mockResolvedValue([{id:'1',categoria:'Voces',activo:true},{id:'2',categoria:'Voces',activo:false},{id:'3',categoria:'Otra',activo:true}])} as unknown as CatalogoRepository;const c=new CatalogoService(r,{salas:new Cache(),equipos:new Cache()});expect(await c.listar('equipos','Voces')).toHaveLength(1);expect(await c.listar('equipos',undefined,true)).toHaveLength(3);});
+test('catálogo niega mutaciones al cliente',async()=>{const r={guardar:jest.fn()} as unknown as CatalogoRepository;await expect(new CatalogoService(r,{salas:new Cache(),equipos:new Cache()}).guardar(actor,'salas',{nombre:'A',categoria:'Sala',precio_centimos:3000,stock:1,activo:true,descripcion:''})).rejects.toMatchObject({status:403});expect(r.guardar).not.toHaveBeenCalled();});
