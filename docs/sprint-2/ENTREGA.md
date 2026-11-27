@@ -35,13 +35,15 @@ El recorrido real ya se completó con ambos roles: acceso, navegación, redirecc
 | Jest y cobertura | `npm run test:verify`, `coverage/complete` y [regresión final](evidencias/regresion-supabase.json). |
 | Validación de calidad | [Informe](VALIDACION.md), k6 y capturas en `evidencias/`. |
 | Demostración sobre Supabase | [Conexión](evidencias/conexion-supabase.json) y [operaciones reales con proveedores simulados](evidencias/demo-supabase.json). |
-| CI recomendado | `.github/workflows/validacion.yml`; pendiente de ejecución en GitHub. |
+| CI recomendado | [GitHub Actions aprobado](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473); [evidencia](evidencias/github-actions.json). |
 
 La cobertura HTML completa se regenera en `coverage/complete/lcov-report/index.html`. Los archivos `.env.local` y credenciales no se entregan ni se suben a Git; se entrega `.env.example`.
 
-## Publicación pendiente
+## Publicación completada
 
-El repositorio de origen está configurado en https://github.com/MancillaLui/app-reservas-salas-ayacucho. Los cambios del Sprint 2 permanecen locales: todavía deben revisarse, incluirse en un commit y subirse. Después, comprobar que GitHub Actions pasa y que el docente puede acceder a la URL. No se ha realizado un push ni se afirma que el workflow remoto ya pasó.
+La entrega está publicada en [la rama codex/sprint-2-entrega](https://github.com/MancillaLui/app-reservas-salas-ayacucho/tree/codex/sprint-2-entrega). El commit funcional `1d32576` pasó [GitHub Actions](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473): instalación, TypeScript, OpenAPI, pruebas con PostgreSQL, cobertura y compilación. La [evidencia remota](evidencias/github-actions.json) registra el SHA y los pasos comprobados. La documentación de cierre se añade después en un commit propio; cada push vuelve a ejecutar el workflow.
+
+La rama principal no se modificó. Entregar el enlace de la rama indicada para que el docente vea el Sprint 2. Si se requiere `main`, integrar mediante revisión.
 
 ## Límite de calidad que debe explicarse
 
@@ -49,4 +51,4 @@ La corrida de 20 VUs pasó sin errores; la corrida extrema de 2.000 VUs no cumpl
 
 ## Cierre y exposición
 
-Consultar [CIERRE.md](CIERRE.md) para la revisión contra la consigna, el empaquetado sin secretos y los pasos de GitHub. El [guion actualizado](EXPOSICION.md) sustituye al guion histórico del Sprint 1. La sesión de GitHub CLI está inválida; publicación y CI remoto no se presentan como completados.
+Consultar [CIERRE.md](CIERRE.md) para la revisión contra la consigna, el empaquetado sin secretos y los pasos de GitHub. El [guion actualizado](EXPOSICION.md) sustituye al guion histórico del Sprint 1. La autorización de GitHub se completó; la rama está publicada y la primera validación remota pasó.

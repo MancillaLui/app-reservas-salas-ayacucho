@@ -2,6 +2,8 @@
 
 ## Sprint 2: aplicación ejecutable
 
+Entrega publicada en la rama `codex/sprint-2-entrega`. [Validación remota aprobada del commit funcional](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473).
+
 Consulta primero el [estado de entrega y los pasos restantes](docs/sprint-2/ENTREGA.md).
 
 Para presentar: [cierre contra la consigna](docs/sprint-2/CIERRE.md) y [guion actualizado del Sprint 2](docs/sprint-2/EXPOSICION.md). `npm run delivery:prepare` genera un paquete local sin configuración privada.

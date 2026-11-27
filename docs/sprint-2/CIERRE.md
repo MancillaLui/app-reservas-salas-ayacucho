@@ -15,7 +15,7 @@ Este índice relaciona la entrega con el PDF `ENTREGABLE-SPRINT-2.pdf` proporcio
 | Cuentas reales | [Comprobación de solo lectura](evidencias/cuentas.json) | Un ADMIN y un CLIENTE confirmados; no acredita recorrido UI |
 | Navegador | `tests/browser`, `evidencias/interfaces` | 15 aprobadas; sesiones privadas controladas |
 | Recorrido real en navegador | [Informe real](evidencias/recorrido-real/resumen.json), capturas y `npm run evidence:real` | Ambos roles, reserva, pago simulado y cancelación aprobados |
-| CI recomendado | `.github/workflows/validacion.yml` | Configurado; pendiente ejecución remota |
+| CI recomendado | [Ejecución aprobada](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473), [evidencia](evidencias/github-actions.json) | Aprobado para el commit funcional `1d32576` |
 
 ## Completar la evidencia autenticada
 
@@ -25,9 +25,9 @@ La versión completa también crea una reserva futura libre desde la interfaz, a
 
 ## Publicar y comprobar CI
 
-La sesión de GitHub CLI detectada tiene un token inválido. Autenticarse localmente con `gh auth login --hostname github.com --web`, usando una cuenta con permiso de escritura en el repositorio. No pegar tokens en el chat. No se cambió el origen ni se publicaron cambios durante este cierre.
+La autorización de GitHub ya se completó con la cuenta propietaria. La rama está [publicada](https://github.com/MancillaLui/app-reservas-salas-ayacucho/tree/codex/sprint-2-entrega) y [CI pasó](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473) para el commit funcional `1d32576`. La evidencia registra ese SHA; los siguientes commits documentales vuelven a ejecutar CI. No se cambió el origen ni se modificó `main`.
 
-Después de revisar el contenido preparado:
+Para reproducir la publicación en una próxima actualización:
 
 ```powershell
 git switch -c codex/sprint-2-entrega
@@ -47,4 +47,4 @@ La exclusión conserva la eliminación local previa de `.vscode/settings.json` f
 
 ## Límites que deben acompañar la entrega
 
-Pagos y mensajería simulados; no hay cobros ni reembolsos reales. La prueba extrema de 2.000 VUs no cumplió el objetivo; no se vuelve a ejecutar sobre Supabase. El 99,9 % es una meta. La demostración autenticada se conserva en un informe separado de los fixtures de navegador. Publicación y CI permanecen pendientes hasta observar resultados remotos.
+Pagos y mensajería simulados; no hay cobros ni reembolsos reales. La prueba extrema de 2.000 VUs no cumplió el objetivo; no se vuelve a ejecutar sobre Supabase. El 99,9 % es una meta. La demostración autenticada se conserva en un informe separado de los fixtures de navegador. Publicación y CI inicial completados; la evidencia remota identifica el commit comprobado.
