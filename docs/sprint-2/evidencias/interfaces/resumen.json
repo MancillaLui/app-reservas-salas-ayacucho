@@ -1,0 +1,69 @@
+{
+  "fecha": "2026-11-27T03:03:40.588Z",
+  "buildId": "gHmuLoU9SNhOhWgoTnnt8",
+  "compilacion": "Next.js producción, Webpack",
+  "navegador": {
+    "startTime": "2026-11-27T03:00:15.204Z",
+    "duration": 16309.999000000002,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "base": "http://127.0.0.1:3001",
+    "roles": "Sesiones y respuestas privadas controladas por fixtures de Playwright",
+    "publico": "Catálogo público real en Supabase mediante la API local; sin escrituras",
+    "supabaseDosCuentasRealesValidado": false
+  },
+  "backend": {
+    "pruebas": 86,
+    "aprobadas": 86,
+    "suites": 7,
+    "entorno": "PostgreSQL temporal aislado",
+    "cobertura": {
+      "lines": {
+        "total": 366,
+        "covered": 364,
+        "skipped": 0,
+        "pct": 99.45
+      },
+      "statements": {
+        "total": 472,
+        "covered": 464,
+        "skipped": 0,
+        "pct": 98.3
+      },
+      "functions": {
+        "total": 109,
+        "covered": 107,
+        "skipped": 0,
+        "pct": 98.16
+      },
+      "branches": {
+        "total": 226,
+        "covered": 207,
+        "skipped": 0,
+        "pct": 91.59
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  },
+  "restricciones": [
+    "Sin nuevas tablas ni cambios en contratos REST.",
+    "Los fixtures no alteran usuarios, roles ni reservas de Supabase.",
+    "La carga de 2.000 VUs no se volvió a ejecutar; conserva el límite documentado.",
+    "Queda pendiente demostrar el recorrido autenticado con dos cuentas reales de Supabase."
+  ],
+  "capturas": [
+    "interfaz-cliente.png",
+    "interfaz-admin.png",
+    "interfaz-admin-movil.png",
+    "interfaz-inicio-movil.png",
+    "interfaz-reserva-movil.png"
+  ],
+  "contratoOpenapiSHA256": "6d3573d75e465d0505a4903811cde68fc019c21f78fd24f99b29f9e9156fd328"
+}

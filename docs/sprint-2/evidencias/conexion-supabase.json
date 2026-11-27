@@ -1,0 +1,17 @@
+{
+  "fecha": "2026-11-27T02:18:37.611Z",
+  "conexionReal": true,
+  "clientePoolerCifrado": true,
+  "certificadoYHostnameVerificados": true,
+  "salas": 2,
+  "equipos": 3,
+  "migraciones": 1,
+  "anon_puede_leer_reservas": false,
+  "navegador_puede_modificar_reservas": false,
+  "apiHealthHTTP": 200,
+  "catalogoHTTP": 200,
+  "authSupabaseHTTP": 200,
+  "registroEmailHabilitado": true,
+  "requiereConfirmacionEmail": true,
+  "autenticacionConCuentaRealPendiente": true
+}

@@ -1,5 +1,34 @@
 # App Web de Reservas de Salas de Ensayo y Equipos - Ayacucho
 
+## Organización del repositorio
+
+La propuesta de reorganización está en `codex/organizacion-proyecto`. Consultar [estructura y equivalencias](docs/sprint-2/ORGANIZACION.md): rutas en `src/app`, frontend en `src/cliente`, backend en `src/servidor`, contratos puros en `src/compartido` y arquitectura en `docs/arquitectura`. Los comandos npm existentes se mantienen.
+
+## Sprint 2: aplicación ejecutable
+
+Consultar los [resultados finales por documentos](docs/sprint-2/resultados-finales/README.md): trabajo realizado, 53 pruebas unitarias, 36 de integración, 21 de navegador, cobertura y objetivos de calidad aprobados, no cumplidos o pendientes.
+
+Entrega publicada en la rama `codex/sprint-2-entrega`. [Validación remota aprobada del commit funcional](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473).
+
+Consulta primero el [estado de entrega y los pasos restantes](docs/sprint-2/ENTREGA.md).
+
+Para presentar: [cierre contra la consigna](docs/sprint-2/CIERRE.md) y [guion actualizado del Sprint 2](docs/sprint-2/EXPOSICION.md). `npm run delivery:prepare` genera un paquete local sin configuración privada.
+
+La web tiene un [sitio musical y paneles separados por rol](docs/sprint-2/INTERFACES.md): `/reservar`, `/ingresar`, `/registro`, `/cliente` y `/admin`. El frontend consume la misma API y conserva la autorización y reglas del backend.
+
+La presentación usa una [estética de estudio musical oscuro](docs/sprint-2/TEMA-OSCURO.md), con controles accesibles, capturas a tres anchos y verificaciones de contraste. Swagger mantiene su esquema claro independiente.
+
+La implementación está en `src/`: Next.js y TypeScript, monolito modular con Clean Architecture, PostgreSQL/Supabase Auth, API REST y Swagger. Los pagos y el envío de comprobantes son **simulados**; las reservas y la asignación de inventario se persisten transaccionalmente.
+
+- [Configuración y ejecución local](docs/sprint-2/INICIO.md).
+- [Especificaciones SDD](docs/sprint-2/SDD.md), [arquitectura y datos](docs/sprint-2/ARQUITECTURA.md), [trazabilidad](docs/sprint-2/TRAZABILIDAD.md) y [validación](docs/sprint-2/VALIDACION.md).
+- API: `/api/v1`; Swagger: `/docs`.
+- Verificación: `npm run typecheck`, `npm run test:verify` y `npm run build`.
+
+Antes de iniciar, completa `.env.local`, ejecuta `npm run db:migrate` y `npm run db:seed`. Usa `npm run dev` para la web y, en otra terminal, `npm run worker` para expiración y envío. No se incluyen credenciales ni usuarios preconfigurados. La guía de inicio describe las cuentas y el rol administrador.
+
+Los documentos de arquitectura y C4 se actualizaron con el código real. Las versiones locales previas se conservaron en `docs/sprint-1-referencia` para mantener el trabajo del Sprint 1 y distinguir propuestas de implementación.
+
 ## Autor
 * MANCILLA APCHO, Luis Alejandro
 

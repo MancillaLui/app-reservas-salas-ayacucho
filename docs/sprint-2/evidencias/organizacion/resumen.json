@@ -1,0 +1,82 @@
+{
+  "fecha": "2026-11-27T15:16:23.056Z",
+  "baseCommit": "e1d3917f6f00c0a4d99f959fc1ad9820af7143e1",
+  "rama": "codex/organizacion-proyecto",
+  "destinoPropuesto": "codex/sprint-2-entrega",
+  "buildId": "9AT_3Zys5tfZ2ZPpSA6_o",
+  "backend": {
+    "aprobadas": 89,
+    "anteriores": 86,
+    "nuevasArquitectura": 3,
+    "suites": 7,
+    "entorno": "PostgreSQL temporal aislado",
+    "cobertura": {
+      "lines": {
+        "total": 364,
+        "covered": 362,
+        "skipped": 0,
+        "pct": 99.45
+      },
+      "statements": {
+        "total": 471,
+        "covered": 463,
+        "skipped": 0,
+        "pct": 98.3
+      },
+      "functions": {
+        "total": 109,
+        "covered": 107,
+        "skipped": 0,
+        "pct": 98.16
+      },
+      "branches": {
+        "total": 226,
+        "covered": 207,
+        "skipped": 0,
+        "pct": 91.59
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  },
+  "navegador": {
+    "startTime": "2026-11-27T15:10:33.985Z",
+    "duration": 54755.451,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "entorno": "Next.js de producción en localhost:3001; casos privados con fixtures controlados, pruebas públicas anteriores de solo lectura contra Supabase"
+  },
+  "invariantes": {
+    "archivosVerificados": 63,
+    "algoritmo": "SHA-256",
+    "cssYOpenapiSinCambios": true,
+    "migracionesYArchivoHistoricoSinCambios": true,
+    "evidenciasAnterioresSinCambios": true
+  },
+  "alcanceCobertura": "Mismo alcance lógico: módulos, infraestructura transversal, compartido, API y OpenAPI; excluye composición y navegador.",
+  "diferenciaCobertura": {
+    "antes": {
+      "lineas": 366,
+      "cubiertas": 364,
+      "sentencias": 472
+    },
+    "ahora": {
+      "lineas": 364,
+      "cubiertas": 362,
+      "sentencias": 471
+    },
+    "motivo": "La caché se inyecta mediante contrato en lugar de importarse e inicializarse en el servicio. No se excluyeron archivos para mantener cobertura."
+  },
+  "limites": [
+    "No se ejecutaron migraciones, seed, worker ni demos que escriban en Supabase.",
+    "Pagos y mensajería simulados; no se repitió carga.",
+    "Las evidencias históricas conservan sus rutas originales como procedencia.",
+    "Publicación como propuesta de integración; no altera la rama de entrega hasta integrar."
+  ]
+}
