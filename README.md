@@ -10,6 +10,8 @@ Para presentar: [cierre contra la consigna](docs/sprint-2/CIERRE.md) y [guion ac
 
 La web tiene un [sitio musical y paneles separados por rol](docs/sprint-2/INTERFACES.md): `/reservar`, `/ingresar`, `/registro`, `/cliente` y `/admin`. El frontend consume la misma API y conserva la autorización y reglas del backend.
 
+La presentación usa una [estética de estudio musical oscuro](docs/sprint-2/TEMA-OSCURO.md), con controles accesibles, capturas a tres anchos y verificaciones de contraste. Swagger mantiene su esquema claro independiente.
+
 La implementación está en `src/`: Next.js y TypeScript, monolito modular con Clean Architecture, PostgreSQL/Supabase Auth, API REST y Swagger. Los pagos y el envío de comprobantes son **simulados**; las reservas y la asignación de inventario se persisten transaccionalmente.
 
 - [Configuración y ejecución local](docs/sprint-2/INICIO.md).

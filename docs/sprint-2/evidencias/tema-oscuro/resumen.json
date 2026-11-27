@@ -1,0 +1,93 @@
+{
+  "fecha": "2026-11-27T13:17:10.329Z",
+  "buildId": "wX43vXezQesUK6cZUdDW5",
+  "cssSHA256": "620bc0b8283f237d1755b8543409586fb520cc07d4f65a0ddc341eec939df24d",
+  "navegador": {
+    "startTime": "2026-11-27T13:16:10.362Z",
+    "duration": 45549.171,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "anchos": [
+      1365,
+      768,
+      390
+    ],
+    "origen": "Chrome contra Next.js de producción en localhost:3001. Recorridos públicos previos leen catálogo real; nuevas revisiones visuales y recorridos privados usan fixtures controlados.",
+    "pruebasOriginales": 15,
+    "pruebasTema": 6,
+    "contraste": {
+      "metodo": "Luminancia relativa sRGB de estilos computados, componiendo transparencias contra fondos de ancestros. Se comprueban muestras de componentes y estados, no una auditoría WCAG completa.",
+      "minimoExigido": 4.5,
+      "minimoObservadoPaneles": 6.348815302021517,
+      "muestrasPaneles": 414
+    }
+  },
+  "backend": {
+    "aprobadas": 86,
+    "suites": 7,
+    "entorno": "PostgreSQL temporal aislado",
+    "cobertura": {
+      "lines": {
+        "total": 366,
+        "covered": 364,
+        "skipped": 0,
+        "pct": 99.45
+      },
+      "statements": {
+        "total": 472,
+        "covered": 464,
+        "skipped": 0,
+        "pct": 98.3
+      },
+      "functions": {
+        "total": 109,
+        "covered": 107,
+        "skipped": 0,
+        "pct": 98.16
+      },
+      "branches": {
+        "total": 226,
+        "covered": 207,
+        "skipped": 0,
+        "pct": 91.59
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  },
+  "limites": [
+    "Sin cambios de API, tablas, permisos o reglas de negocio.",
+    "Capturas privadas con datos controlados; no sustituyen las evidencias reales anteriores.",
+    "Pagos y mensajería simulados. No se repite carga ni se acredita nueva capacidad.",
+    "Swagger conserva esquema claro independiente."
+  ],
+  "archivos": [
+    "admin-1365.png",
+    "admin-390.png",
+    "admin-768.png",
+    "cancelacion-cliente.png",
+    "cliente-1365.png",
+    "cliente-390.png",
+    "cliente-768.png",
+    "confirmacion-admin.png",
+    "contraste-admin.json",
+    "contraste-cliente.json",
+    "error-sesion.png",
+    "inicio-1365.png",
+    "inicio-390.png",
+    "inicio-768.png",
+    "lista-vacia.png",
+    "modal-catalogo.png",
+    "pago-pendiente.png",
+    "pago-vencido.png",
+    "reserva-1365.png",
+    "reserva-390.png",
+    "reserva-768.png"
+  ]
+}

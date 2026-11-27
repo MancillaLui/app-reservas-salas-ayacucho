@@ -1,0 +1,536 @@
+[
+  {
+    "width": 1365,
+    "path": "/cliente",
+    "resultados": [
+      {
+        "texto": "BIENVENIDO A TU ESPACIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Siempre hay algo por crear.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza tus ensayos y deja espacio para la música.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "TU PRÓXIMA CANCIÓN TE ESPERA",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Reservar un ensayo",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "LO QUE VIENE",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/cliente/reservas",
+    "resultados": [
+      {
+        "texto": "TU MÚSICA, ORGANIZADA",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Mis reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Tus próximos ensayos y el historial de tus sesiones.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/cliente/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "TU PRÓXIMO ENSAYO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Puedes cancelar una reserva pendiente o confirmada antes de su in",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/cliente",
+    "resultados": [
+      {
+        "texto": "BIENVENIDO A TU ESPACIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Siempre hay algo por crear.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza tus ensayos y deja espacio para la música.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "TU PRÓXIMA CANCIÓN TE ESPERA",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Reservar un ensayo",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "LO QUE VIENE",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/cliente/reservas",
+    "resultados": [
+      {
+        "texto": "TU MÚSICA, ORGANIZADA",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Mis reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Tus próximos ensayos y el historial de tus sesiones.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/cliente/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "TU PRÓXIMO ENSAYO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Puedes cancelar una reserva pendiente o confirmada antes de su in",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/cliente",
+    "resultados": [
+      {
+        "texto": "BIENVENIDO A TU ESPACIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Siempre hay algo por crear.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza tus ensayos y deja espacio para la música.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "TU PRÓXIMA CANCIÓN TE ESPERA",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Reservar un ensayo",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "LO QUE VIENE",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/cliente/reservas",
+    "resultados": [
+      {
+        "texto": "TU MÚSICA, ORGANIZADA",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Mis reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Tus próximos ensayos y el historial de tus sesiones.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/cliente/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "TU PRÓXIMO ENSAYO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Puedes cancelar una reserva pendiente o confirmada antes de su in",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  }
+]

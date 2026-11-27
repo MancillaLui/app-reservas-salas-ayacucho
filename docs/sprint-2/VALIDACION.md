@@ -95,3 +95,13 @@ TypeScript y OpenAPI se verificaron otra vez después de añadir las herramienta
 Se autorizó GitHub CLI con la cuenta propietaria y se publicó la rama `codex/sprint-2-entrega`. La [ejecución remota](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473) del commit funcional `1d325761bfe9047c29a3c76cb19d9df929d66c63` terminó en SUCCESS. Pasaron instalación limpia, TypeScript, validación de OpenAPI, Jest con PostgreSQL 17 aislado, generación de cobertura y compilación de producción. El reporte de cobertura quedó como artefacto de Actions. [Evidencia con SHA y pasos](evidencias/github-actions.json).
 
 El [enlace de entrega](https://github.com/MancillaLui/app-reservas-salas-ayacucho/tree/codex/sprint-2-entrega) apunta a la rama publicada; `main` se conserva. Esta actualización sustituye el pendiente de autenticación/publicación de las secciones cronológicas anteriores. No representa un despliegue web, nuevas pruebas de carga ni uso de proveedores financieros reales.
+
+## Actualización: presentación musical oscura
+
+El 27 de noviembre de 2026 (America/Lima) se aplicó un único tema oscuro al sitio, autenticación, reserva y paneles. Swagger conserva su esquema claro. Los cambios funcionales de presentación se limitan a CSS y la clase de aislamiento visual de la documentación; no cambian API, tablas, permisos, tarifas ni reglas de negocio.
+
+La compilación de producción y TypeScript pasaron. Se repitieron las 86 pruebas backend en PostgreSQL temporal aislado: siete suites aprobadas y cobertura de líneas de 99,45 %. OpenAPI validó las mismas 26 operaciones. Pasaron 21 pruebas de navegador: las 15 previas y seis nuevas de tema. Se comprobaron 1365, 768 y 390 píxeles sin desbordamiento horizontal, foco visible, controles, modales, estados de carga/error/vacío, confirmación, pago pendiente, vencimiento y cancelación.
+
+Las muestras de texto y componentes exigieron contraste mínimo 4,5:1; las 414 muestras de paneles tuvieron mínimo observado de 6,35:1. La medición usa estilos computados y composición de fondos; no acredita una auditoría WCAG completa ni todas las combinaciones de contenido. Se corrigió una transición de fondo que producía contraste insuficiente al habilitar el botón de pago y se adaptaron los campos de fecha/hora para evitar truncamiento en tableta.
+
+[Informe reproducible y procedencia](evidencias/tema-oscuro/resumen.json), [documentación y capturas](TEMA-OSCURO.md). Las capturas nuevas usan fixtures de sesión/API; no se hicieron escrituras en Supabase. Las evidencias auténticas del recorrido anterior se conservaron intactas. No se repitió la carga extrema ni se modifican sus límites; pagos y mensajes continúan simulados.

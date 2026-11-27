@@ -1,0 +1,1304 @@
+[
+  {
+    "width": 1365,
+    "path": "/admin",
+    "resultados": [
+      {
+        "texto": "EL ESTUDIO, EN UN VISTAZO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Que todo esté listo para sonar.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza la agenda y prepara cada sesión desde un solo lugar.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar resumen",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "PREPARA LA PRÓXIMA SESIÓN",
+        "ratio": 6.348815302021517
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/reservas",
+    "resultados": [
+      {
+        "texto": "OPERACIÓN DEL LOCAL",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Agenda de reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los horarios y abre cada reserva para ver su detalle.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "SalaTodas las salasSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todas las salasSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/catalogo",
+    "resultados": [
+      {
+        "texto": "LOS RECURSOS DE TU ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Salas y equipos",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Mantén el catálogo listo para el próximo ensayo.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Crear sala",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Buscar en el catálogo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Sala WariSalaEspacio para tu banda.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Sala",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Espacio para tu banda.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 30.00por hora",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "por hora",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "1",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "EditarDesactivar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Editar",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Desactivar",
+        "ratio": 10.1869205460565
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/bloqueos",
+    "resultados": [
+      {
+        "texto": "MANTENIMIENTO Y CIERRES",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Bloqueos de horario",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Inhabilita una sala durante el intervalo que necesites, sin modif",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "SalaSelecciona una salaSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Selecciona una salaSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Inicio",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fin",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Motivo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Hora de Lima. Máximo 24 horas por bloqueo. Si el horario tiene un",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Bloquear horario",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 7.331267337217903
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/pagos",
+    "resultados": [
+      {
+        "texto": "OPERACIONES DEL SIMULADOR",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Pagos y conciliación",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los intentos de pago y resuelve resultados inciertos.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del pagoTodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Ver reserva27 nov. 2026, 8:16 a. m.Sin referencia definitiva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "27 nov. 2026, 8:16 a. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Sin referencia definitiva",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 8.960458361933597
+      },
+      {
+        "texto": "AprobarRechazar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Aprobar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Rechazar",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/comprobantes",
+    "resultados": [
+      {
+        "texto": "COMUNICACIÓN DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Comprobantes",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta el resultado de cada envío simulado y el comprobante per",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar envíos",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del envíoTodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Buscar por reserva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "ENVIADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "El worker procesa los envíos en segundo plano. Un fallo de envío ",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 1365,
+    "path": "/admin/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "AGENDA DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Como administrador puedes gestionar cancelaciones por fuerza mayo",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin",
+    "resultados": [
+      {
+        "texto": "EL ESTUDIO, EN UN VISTAZO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Que todo esté listo para sonar.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza la agenda y prepara cada sesión desde un solo lugar.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar resumen",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "PREPARA LA PRÓXIMA SESIÓN",
+        "ratio": 6.348815302021517
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/reservas",
+    "resultados": [
+      {
+        "texto": "OPERACIÓN DEL LOCAL",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Agenda de reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los horarios y abre cada reserva para ver su detalle.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "SalaTodas las salasSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todas las salasSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/catalogo",
+    "resultados": [
+      {
+        "texto": "LOS RECURSOS DE TU ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Salas y equipos",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Mantén el catálogo listo para el próximo ensayo.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Crear sala",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Buscar en el catálogo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Sala WariSalaEspacio para tu banda.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Sala",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Espacio para tu banda.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 30.00por hora",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "por hora",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "1",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "EditarDesactivar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Editar",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Desactivar",
+        "ratio": 10.1869205460565
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/bloqueos",
+    "resultados": [
+      {
+        "texto": "MANTENIMIENTO Y CIERRES",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Bloqueos de horario",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Inhabilita una sala durante el intervalo que necesites, sin modif",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "SalaSelecciona una salaSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Selecciona una salaSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Inicio",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fin",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Motivo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Hora de Lima. Máximo 24 horas por bloqueo. Si el horario tiene un",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Bloquear horario",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 7.331267337217903
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/pagos",
+    "resultados": [
+      {
+        "texto": "OPERACIONES DEL SIMULADOR",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Pagos y conciliación",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los intentos de pago y resuelve resultados inciertos.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del pagoTodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Ver reserva27 nov. 2026, 8:16 a. m.Sin referencia definitiva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "27 nov. 2026, 8:16 a. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Sin referencia definitiva",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 8.960458361933597
+      },
+      {
+        "texto": "AprobarRechazar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Aprobar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Rechazar",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/comprobantes",
+    "resultados": [
+      {
+        "texto": "COMUNICACIÓN DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Comprobantes",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta el resultado de cada envío simulado y el comprobante per",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar envíos",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del envíoTodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Buscar por reserva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "ENVIADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "El worker procesa los envíos en segundo plano. Un fallo de envío ",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "path": "/admin/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "AGENDA DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Como administrador puedes gestionar cancelaciones por fuerza mayo",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin",
+    "resultados": [
+      {
+        "texto": "EL ESTUDIO, EN UN VISTAZO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Que todo esté listo para sonar.",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Organiza la agenda y prepara cada sesión desde un solo lugar.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar resumen",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "PREPARA LA PRÓXIMA SESIÓN",
+        "ratio": 6.348815302021517
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/reservas",
+    "resultados": [
+      {
+        "texto": "OPERACIÓN DEL LOCAL",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Agenda de reservas",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los horarios y abre cada reserva para ver su detalle.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "EstadoTodos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPI",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todos los estadosPENDIENTEPROCESANDOCONFIRMADACANCELADAEXPIRADA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fecha del ensayo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "SalaTodas las salasSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Todas las salasSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Limpiar filtros",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Sala Wari30 nov. 2026, 6:00 p. m.Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "30 nov. 2026, 6:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Hasta 30 nov. 2026, 7:00 p. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Ver detalle",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/catalogo",
+    "resultados": [
+      {
+        "texto": "LOS RECURSOS DE TU ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Salas y equipos",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Mantén el catálogo listo para el próximo ensayo.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Crear sala",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Buscar en el catálogo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Sala WariSalaEspacio para tu banda.",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Sala",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Espacio para tu banda.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 30.00por hora",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "por hora",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "1",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "ACTIVO",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "EditarDesactivar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Editar",
+        "ratio": 7.331267337217903
+      },
+      {
+        "texto": "Desactivar",
+        "ratio": 10.1869205460565
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/bloqueos",
+    "resultados": [
+      {
+        "texto": "MANTENIMIENTO Y CIERRES",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Bloqueos de horario",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Inhabilita una sala durante el intervalo que necesites, sin modif",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "SalaSelecciona una salaSala Wari",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Selecciona una salaSala Wari",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Inicio",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Fin",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Motivo",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Hora de Lima. Máximo 24 horas por bloqueo. Si el horario tiene un",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Bloquear horario",
+        "ratio": 13.507616738973141
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 7.331267337217903
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/pagos",
+    "resultados": [
+      {
+        "texto": "OPERACIONES DEL SIMULADOR",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Pagos y conciliación",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta los intentos de pago y resuelve resultados inciertos.",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del pagoTodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosAPROBADORECHAZADOPROCESANDOINCIERTO",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Ver reserva27 nov. 2026, 8:16 a. m.Sin referencia definitiva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "27 nov. 2026, 8:16 a. m.",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Sin referencia definitiva",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "S/ 40.00",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INCIERTO",
+        "ratio": 8.960458361933597
+      },
+      {
+        "texto": "AprobarRechazar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Aprobar",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Rechazar",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/comprobantes",
+    "resultados": [
+      {
+        "texto": "COMUNICACIÓN DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Comprobantes",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Consulta el resultado de cada envío simulado y el comprobante per",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar envíos",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "Estado del envíoTodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "TodosPENDIENTEENVIANDOENVIADAFALLIDA",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "Buscar por reserva",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "INPUT",
+        "ratio": 15.771427693228791
+      },
+      {
+        "texto": "ENVIADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Se muestran hasta 200 registros devueltos por la API. Los filtros",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "El worker procesa los envíos en segundo plano. Un fallo de envío ",
+        "ratio": 9.141743727732138
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "path": "/admin/reservas/40000000-0000-4000-8000-000000000001",
+    "resultados": [
+      {
+        "texto": "AGENDA DEL ESTUDIO",
+        "ratio": 8.272098759103612
+      },
+      {
+        "texto": "Sala Wari",
+        "ratio": 17.34765481685261
+      },
+      {
+        "texto": "Reserva 40000000-0000-4000-8000-000000000001",
+        "ratio": 10.314916025816805
+      },
+      {
+        "texto": "Actualizar estado",
+        "ratio": 15.374610342527388
+      },
+      {
+        "texto": "CONFIRMADA",
+        "ratio": 9.647183571731318
+      },
+      {
+        "texto": "Cancelar reserva",
+        "ratio": 10.1869205460565
+      },
+      {
+        "texto": "TENLO A MANO",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Como administrador puedes gestionar cancelaciones por fuerza mayo",
+        "ratio": 9.141743727732138
+      },
+      {
+        "texto": "Pagos y mensajes de esta versión son simulados.",
+        "ratio": 9.141743727732138
+      }
+    ]
+  }
+]

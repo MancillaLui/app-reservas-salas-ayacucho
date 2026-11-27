@@ -13,7 +13,7 @@ Este índice relaciona la entrega con el PDF `ENTREGABLE-SPRINT-2.pdf` proporcio
 | Escenarios de calidad | [Resultados](VALIDACION.md), `tests/load` y `evidencias` | Resultados medidos; incluye la meta no alcanzada de 2.000 VUs |
 | Primera versión funcional | [Inicio](INICIO.md), [interfaces](INTERFACES.md) | Ejecutable local con Supabase |
 | Cuentas reales | [Comprobación de solo lectura](evidencias/cuentas.json) | Un ADMIN y un CLIENTE confirmados; no acredita recorrido UI |
-| Navegador | `tests/browser`, `evidencias/interfaces` | 15 aprobadas; sesiones privadas controladas |
+| Navegador | `tests/browser`, [tema oscuro](TEMA-OSCURO.md) | 15 pruebas funcionales conservadas y seis de tema/contraste; evidencia separada por procedencia |
 | Recorrido real en navegador | [Informe real](evidencias/recorrido-real/resumen.json), capturas y `npm run evidence:real` | Ambos roles, reserva, pago simulado y cancelación aprobados |
 | CI recomendado | [Ejecución aprobada](https://github.com/MancillaLui/app-reservas-salas-ayacucho/actions/runs/45933818473), [evidencia](evidencias/github-actions.json) | Aprobado para el commit funcional `1d32576` |
 

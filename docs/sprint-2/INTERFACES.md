@@ -1,5 +1,7 @@
 # Interfaces por rol de ENSAYA
 
+La presentación actual usa un [tema musical oscuro compartido](TEMA-OSCURO.md). Las capturas de `evidencias/interfaces` y `evidencias/recorrido-real` se conservan como registros del diseño previo; las nuevas capturas visuales están separadas en `evidencias/tema-oscuro` y usan fixtures controlados.
+
 ## Organización implementada
 
 La interfaz se divide en tres experiencias: sitio público, espacio del músico y administración. Las páginas de Next.js están en `src/app`; los componentes y el estado de presentación están en `src/presentacion`, agrupados por autenticación, cliente, administrador, reservas y piezas compartidas. La pantalla monolítica `estudio.tsx` fue sustituida por estas páginas.

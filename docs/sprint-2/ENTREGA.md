@@ -51,4 +51,6 @@ La corrida de 20 VUs pasó sin errores; la corrida extrema de 2.000 VUs no cumpl
 
 ## Cierre y exposición
 
+La presentación final utiliza un [tema de estudio musical oscuro](TEMA-OSCURO.md). La revisión visual y sus nuevas capturas se separan de las evidencias reales del recorrido funcional, que se conservaron sin cambios.
+
 Consultar [CIERRE.md](CIERRE.md) para la revisión contra la consigna, el empaquetado sin secretos y los pasos de GitHub. El [guion actualizado](EXPOSICION.md) sustituye al guion histórico del Sprint 1. La autorización de GitHub se completó; la rama está publicada y la primera validación remota pasó.
